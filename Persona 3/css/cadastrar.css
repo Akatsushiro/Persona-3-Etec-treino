@@ -1,0 +1,26 @@
+body{
+    background-image: url(../img/Persona_Login.png);
+    background-size: 100% 100%;
+}
+.cadastrar{
+    background-color: rgba(2, 142, 223, 0.616);
+    width: 30%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-left: 14%;
+    font-family: 'persona_titulo', Courier, monospace;
+}
+.cadastrar label{
+    font-size: 150%;
+    text-shadow: 2px 2px rgb(166, 99, 243);
+}
+.cadastrar h1{
+    text-shadow: 2px 2px rgb(166, 99, 243);
+}
+.cadastrar input{
+    width: 90%;
+}
+#excecao{
+    font-size: 10px;
+}

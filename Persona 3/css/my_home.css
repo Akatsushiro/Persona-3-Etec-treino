@@ -1,0 +1,82 @@
+.barra_lateral{
+    width: 20%;
+    position: absolute;
+    background-color: rgba(13, 144, 204, 0.719);
+    height:100%;
+    padding: 10px;
+    z-index: -1;
+}
+.perfil_img_lateral{
+    background-size: 100% 100%;
+    width: 40%;
+    height: 135px;
+    border-radius: 100%;
+    z-index: -1;
+}
+.capa_home{
+    margin:0;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: 21.53%;
+    width: 78.47%;
+    height: 400px;
+}
+nav{
+    color: black;
+    z-index: 1;
+}
+#log_name{
+    position: absolute;
+    font-size: 150%;
+    margin-top: 13%;
+    width: 20%;
+    text-align: center;
+    font-family: 'titulo', Courier, monospace;
+}
+.opcoes_all{
+    position: absolute;
+    margin-top: 250px;
+    left: 1.5%;
+    width: 18%;
+}
+.lateral_opcoes{
+
+    display: block;
+    padding: 10px;
+    z-index: 1;
+    background-color: #e1d9ee;
+    border-bottom: 5px solid #ff0000;
+}
+.lateral_opcoes:hover{
+    display: block;
+    text-decoration: none;
+    background-color: blueviolet;
+}
+.perfil_main_capa{
+    width: 15%;
+    height: 130px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 325px;
+    margin-left: 53%;
+    border: 5px solid rgba(61, 13, 192, 0.603);
+    border-radius: 5px;
+}
+.informacoes{
+    position: absolute;
+    background-color: rgb(228, 231, 231);
+    border-radius: 10px;
+    width: 78.47%;
+    height: 250px;
+    margin-top: 420px;
+    margin-left: 21.53%;
+    z-index: -1;
+    font-family: 'Persona', Courier, monospace;
+}
+.informacoes label{
+    margin-top: 3%;
+    display: block;
+    margin-left: 3%;
+    padding: 5px;
+}

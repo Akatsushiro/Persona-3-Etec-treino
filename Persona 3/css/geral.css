@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Persona;
+    src: url('../fonts/Persona.ttf');
+
+    font-family: comumPersona;
+    src: url('../fonts/february.otf');
+
+    font-family: titulo;
+    src: url('../fonts/p3.ttf')
+}
+body{
+    background-image: url('../img/background_5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+.decoracao{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+.botao{
+    border-radius: 10px;
+    background-color: rgb(245, 241, 225);
+    padding: 10px;
+    text-shadow: 1px 1px rgb(166, 99, 243);
+}
