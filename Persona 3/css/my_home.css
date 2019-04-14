@@ -1,10 +1,12 @@
+
 .barra_lateral{
     width: 20%;
     position: absolute;
+    position: fixed;
     background-color: rgba(13, 144, 204, 0.719);
     height:100%;
-    padding: 10px;
     z-index: -1;
+    padding: 10px;
 }
 .perfil_img_lateral{
     background-size: 100% 100%;
@@ -27,6 +29,7 @@ nav{
 }
 #log_name{
     position: absolute;
+    position: fixed;
     font-size: 150%;
     margin-top: 13%;
     width: 20%;
@@ -35,12 +38,12 @@ nav{
 }
 .opcoes_all{
     position: absolute;
+    position: fixed;
     margin-top: 250px;
     left: 1.5%;
     width: 18%;
 }
 .lateral_opcoes{
-
     display: block;
     padding: 10px;
     z-index: 1;
@@ -79,4 +82,13 @@ nav{
     display: block;
     margin-left: 3%;
     padding: 5px;
+}
+.conteudo{
+    background-color: #95ff0b5d;
+    position: absolute;
+    width: 78.47%;
+    height: 50000px;
+    margin-top: 700px;
+    margin-left: 21.53%;
+
 }

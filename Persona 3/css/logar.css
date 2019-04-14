@@ -1,8 +1,7 @@
 body{
-    background-image: url(../img/Persona_Login.png);
+    background-image: url(../img/Persona_Login.jpg);
     background-size: 100% 100%;
 }
-
 .logar{
     background-color: rgba(2, 142, 223, 0.616);
     width: 30%;
@@ -11,7 +10,6 @@ body{
     margin-top: 5%;
     margin-left: 14%;
     font-family: 'persona_titulo', Courier, monospace;
-    
 }
 .logar label{
     font-size: 25px;
