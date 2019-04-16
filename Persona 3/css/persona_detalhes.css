@@ -1,0 +1,29 @@
+
+.nome_nv{
+    background-color: rgba(6, 0, 59, 0.76);
+    color: azure;
+    height: 100px;
+    font-size: 45px;
+    font-family: 'p5', Courier, monospace;
+}
+#nome{
+    margin: 2%;
+    font-size: 75px;
+    float: right;
+}
+#nivel{
+    margin-left: 3%;
+    margin-top: 2%;
+}
+.descricao{
+    background-color: rgba(6, 0, 59, 0.76);
+    color: azure;
+    font-size: 30px;
+    text-align: justify;
+    width: 40%;
+    padding: 11px;
+    border-radius: 10px;
+    position:  absolute;
+    margin-left: 58.3%;
+    margin-top: 45.9%;
+}

@@ -6,10 +6,12 @@
     src: url('../fonts/february.otf');
 
     font-family: titulo;
-    src: url('../fonts/p3.ttf')
+    src: url('../fonts/p3.ttf');  
+    font-family: p5;
+    src: url('../fonts/p5.ttf');
 }
 body{
-    background-image: url('../img/background_5.jpg');
+    background-image: url('../img/background_3.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%; 

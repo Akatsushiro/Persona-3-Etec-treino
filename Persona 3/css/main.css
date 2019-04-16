@@ -2,7 +2,7 @@
 .imagem_abertura{
     width: 100%;
     height: 500px;
-    background-image: url('../img/img_abertura.jpg');
+    background-image: url('../img/img_abertura.webp');
     background-size: 100% 500px;
 }
 .abertura_logo_text{
@@ -27,17 +27,17 @@
 }
 .barra_acesso{
     background-color: rgba(146, 197, 255, 0.9);
-    width: auto;
     display: inline-block;
+    position: absolute;
     padding: 5px;
     font-size: 125%;
     border-radius: 6px;
     font-family: 'comum_persona', Courier, monospace; 
     box-shadow:  inset 0 0 2px #000000;
-    margin-left: 38%;   
+    left: 50%;
+    margin-left: -20%;
     margin-top: 485px;
 }
-
 .main{
     width: 70%;
     margin-top: 3%; 

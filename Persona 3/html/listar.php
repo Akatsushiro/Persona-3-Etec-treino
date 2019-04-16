@@ -9,7 +9,7 @@
 <?php
 include "../php/conectar.php";
 $dados = mysqli_query($sql, "SELECT * FROM usuario where =  ");
-
+?>
 <?php 
 	while($coluna = mysqli_fetch_array($dados)){
 		$id = $coluna['id'];
