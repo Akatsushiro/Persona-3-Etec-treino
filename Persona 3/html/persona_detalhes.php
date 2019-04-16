@@ -32,6 +32,29 @@
             <div class = "descricao">
                 <label><?php echo $descricao?></label>
             </div>
+
+            <div class="status">
+                <div class = "status_lbl">                
+                    <label>St</label>
+                    <label>Ma</label>
+                    <label>En</label>
+                    <label>Ag</label>
+                    <label>Lu</label>
+                </div>
+                <?php
+                    $streng = 25;
+                ?>
+			    <div class ="status_num">
+                    <div class ="status_bar" style = "background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $streng?>%,  rgba(153, 153, 153, 0.233) <?php echo $streng?>%"><label><?php echo $streng?></label></div>
+                    <div class ="status_bar" style = "background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $streng?>%,  rgba(153, 153, 153, 0.233) <?php echo $streng?>%"><label><?php echo $streng?></label></div>
+                    <div class ="status_bar" style = "background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $streng?>%,  rgba(153, 153, 153, 0.233) <?php echo $streng?>%"><label><?php echo $streng?></label></div>
+                    <div class ="status_bar" style = "background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $streng?>%,  rgba(153, 153, 153, 0.233) <?php echo $streng?>%"><label><?php echo $streng?></label></div>
+                    <div class ="status_bar" style = "background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $streng?>%,  rgba(153, 153, 153, 0.233) <?php echo $streng?>%"><label><?php echo $streng?></label></div>
+                </div>
+		    </div>
+            <div class = "imagem_persona">
+                <img src = <?php echo $img?>>
+            </div>
         </section>
     </body>
 </html>
