@@ -1,4 +1,7 @@
 
+body{
+    max-width: 1366px;
+}
 .nome_nv{
     background-color: rgba(6, 0, 59, 0.76);
     color: azure;
@@ -20,6 +23,7 @@ body{
     min-height: 100%;
 }
 .descricao{
+    margin-top: 2px;
     position: absolute;
     background-color: rgba(6, 0, 59, 0.76);
     color: azure;
@@ -32,6 +36,7 @@ body{
     bottom: 0;
 }
 .status{
+    font-family: 'p5', Courier, monospace;
     position: absolute;
     background-color: rgba(6, 0, 59, 0.76);
     width: 35%;
@@ -41,7 +46,7 @@ body{
 }
 .status label{
     display: block;
-    margin: 30%;
+    margin: 38%;
     z-index: 2;
 }
 .status_lbl{
@@ -73,5 +78,37 @@ body{
     height: 500px;
     position: absolute;
     margin-left: 38%;
-    margin-top: 8%;
+    top: 10;
+    z-index: -1;
+}
+.habilidades{
+    position: absolute;
+    width: 20%;
+    margin-top: 20px;
+}
+.habilidade_slot{
+    background-color: rgba(23, 156, 218, 0.836);
+    border-bottom: 5px solid #0011ff;
+    font-size: 30px;
+    display: block;
+    color: azure;
+    font-family: 'p5', Courier, monospace;
+}
+.caracteristicas{
+    width: 35%;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    background-color: rgba(0, 0, 158, 0.774);
+}
+.elemento img{
+    width: 100%;
+}
+.elemento{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    font-size: 150%;
+    color: azure;
+    font-family: 'p5', Courier, monospace;
 }
