@@ -6,16 +6,15 @@
 		<!--esse aqui é para chamar o css-->
 		<link rel="stylesheet" href="../css/normalize.css" type="text/css">
 		<link rel="stylesheet" href="../css/geral.css" type="text/css">
-		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="../css/compendium.css" type="text/css">
 </head>
 <body>
     <center>
     <table>
-        <tr>
+        <tr class = "cabecario">
             <td>NOME</td>
             <td>NIVEL</td>
             <td>ARCANO</td>
-            <td>DESCRICAO</td>
         </tr>
 <?php 
     include "../php/conectar.php";
@@ -28,7 +27,7 @@
 		
 		echo"
 		
-		<tr>
+		<tr class = 'selecao'>
 			<td><a href='persona_detalhes.php?id=$id' class = 'decoracao'>$nome</a></td>
 			<td>$nivel</td>
 			<td>$arcano</td>

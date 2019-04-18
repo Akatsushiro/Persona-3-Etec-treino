@@ -93,6 +93,8 @@ body{
     display: block;
     color: azure;
     font-family: 'p5', Courier, monospace;
+    padding-left: 5px;
+    
 }
 .caracteristicas{
     width: 35%;

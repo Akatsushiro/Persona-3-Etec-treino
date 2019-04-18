@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <!--esse aqui é para chamar o css-->
 		<link rel="stylesheet" href="../css/normalize.css" type="text/css">
 		<link rel="stylesheet" href="../css/geral.css" type="text/css">
@@ -45,7 +45,31 @@
                 $trevas       = $coluna['trevas'];
             }
             //pesquisa as skills da persona
-            $dados = mysqli_query($sql, "SELECT * FROM `personba habilidade` WHERE" );
+            //pesquisa os ids das pesonas e pesquisa os ids das skills
+            $dados = mysqli_query($sql, "SELECT * FROM `persona_habilidade` WHERE id_persona_hab = '$id'" );
+            $vetor = [];
+            while($coluna = mysqli_fetch_array($dados)){
+                $temp = $coluna['id_habilidade_per'];
+                $vetor[] = $temp;
+            }
+            //aqui armazena os ids a serem pesquisados
+            $vetor = (array) $vetor;
+            //pesquisa os ids da skills pesquisados
+            $cont = count($vetor);
+            $col = 0;
+            while($col < $cont){
+                $temp = $vetor[$col];
+                $col++;
+                $dados = mysqli_query($sql, "SELECT * FROM `lista_habilidade` where id_habilidade = '$temp'");
+                while($coluna = mysqli_fetch_array($dados)){
+                    $skill[] = $coluna['nome_habilidade'];
+                } 
+            }
+            $cont = 0;
+            while(count($skill) < 8){
+                $skill[] = "-";
+            }
+            
         ?>
         <header>
             <div class = "nome_nv">
@@ -82,14 +106,14 @@
                 <img src = <?php echo $img?>>
             </div>
             <div class ="habilidades">
-                <div class = "habilidade_slot">Cadenza</div>
-                <div class = "habilidade_slot">Agi</div>
-                <div class = "habilidade_slot">Thunder Reign</div>
-                <div class = "habilidade_slot">Diarama</div>
-                <div class = "habilidade_slot">Unshaken Will</div>
-                <div class = "habilidade_slot">Black Viper</div>
-                <div class = "habilidade_slot">Die for Me!</div>
-                <div class = "habilidade_slot">Samsara</div>
+                <div class = "habilidade_slot"><?php echo $skill[0]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[1]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[2]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[3]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[4]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[5]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[6]?></div>
+                <div class = "habilidade_slot"><?php echo $skill[7]?></div>
             </div>
 
             <div class = "caracteristicas">

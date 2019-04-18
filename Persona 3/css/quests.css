@@ -1,0 +1,17 @@
+.quest{
+    background-color: rgba(0, 60, 255, 0.726);
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+}
+.conteudo{
+    background-color: rgba(1, 194, 253, 0.863);
+    border-radius: 7px;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    background-color: rgba(1, 194, 253, 0.863); 
+}
+
