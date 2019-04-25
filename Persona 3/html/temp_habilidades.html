@@ -1,0 +1,57 @@
+<!Doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+		<title>Persona 3</title>
+		<!--esse aqui é para chamar o css-->
+		<link rel="stylesheet" href="../css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="../css/geral.css" type="text/css">
+		<link rel="stylesheet" href="css/quests.css" type="text/css">
+</head>
+<body>
+    <center>
+    <form enctype="multipart/form-data" method = "post" action = "../php/temp_salvar.php">
+        Nome da Habilidade: 
+        <input type="text" name="habilidade" required>
+        <br>
+        <br>
+        Tipo Habilidade:
+        <select name = "tipo" required>
+            <option value="Almighty">Almighty</option>
+            <option value="Special">Special</option>
+            <option value="Bad Status">Bad Status</option>
+            <option value="Enhance">Enhance</option>
+            <option value="Recovery">Recovery</option>
+            <option value="Dark">Dark</option>
+            <option value="Light">Light</option>
+            <option value="Wind">Wind</option>
+            <option value="Eletricity">Eletricity</option>
+            <option value="Ice">Ice</option>
+            <option value="Fire">Fire</option>
+            <option value="Pierce">Pierce</option>
+            <option value="Strike">Strike</option>
+            <option value="Slash">Slash</option>
+            <option value="Passive">Pasisve</option>
+            <option value="Tactical Support">Tactical Support</option>
+            <option value="Fusion Spells">Fusion Spell</option>
+        </select>
+        <br>
+        <br>
+        Custo:
+        <input type ="text" name = "custo" required>
+        <br>
+        <br>
+        Rank: 
+        <input type="text" name = "rank" required>
+        <br>
+        <br>
+        Descrição:
+        <input type="text" name = "descricao" required>
+        <br>
+        <br>
+        <br>
+        <button>Salvar</button>
+    </form> 
+    </center>
+</body>
+</html>

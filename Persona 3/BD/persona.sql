@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Abr-2019 às 22:00
+-- Generation Time: 18-Abr-2019 às 22:05
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.3
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `persona`
 --
-CREATE DATABASE IF NOT EXISTS `persona` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `persona` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `persona`;
 
 -- --------------------------------------------------------
@@ -61,7 +61,7 @@ INSERT INTO `elementos` (`corte`, `impacto`, `perfurante`, `fogo`, `gelo`, `vent
 CREATE TABLE `lista_habilidade` (
   `id_habilidade` int(11) NOT NULL,
   `nome_habilidade` varchar(20) NOT NULL,
-  `tipo_habilidade` varchar(10) NOT NULL,
+  `tipo_habilidade` varchar(15) NOT NULL,
   `custo` varchar(5) NOT NULL,
   `descricao_habilidade` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -71,10 +71,21 @@ CREATE TABLE `lista_habilidade` (
 --
 
 INSERT INTO `lista_habilidade` (`id_habilidade`, `nome_habilidade`, `tipo_habilidade`, `custo`, `descricao_habilidade`) VALUES
-(1, 'bufu', 'ice', '4SP', 'Causa dano leve de Gelo / Congela 1 inimigo.'),
+(1, 'Bufu', 'ice', '4SP', 'Causa dano leve de Gelo / Congela 1 inimigo.'),
 (2, 'Pulinpa', 'Bad Status', '5SP', 'Deixa 1 inimigo em pânico (25% Chance)'),
 (3, 'Re Patra', 'Recovery', '3SP', 'Ajuda 1 aliado caído.'),
-(4, 'Sonic Punch', 'Strike', '9%HP', 'Causa dano de impacto a 1 inimigo.');
+(4, 'Sonic Punch', 'Strike', '9%HP', 'Causa dano de impacto a 1 inimigo.'),
+(5, 'Ice Boost', 'Passiva', '-', 'Fortalece ataques de gelo (25%).'),
+(6, 'Mabufu', 'Ice', '8SP', 'Causa dano leve de gelo/ todos os inimigos.'),
+(7, 'Ziodyne', 'Eletricidade', '16SP', 'Causa dano elétrico pesado/ Choques à 1 inimigo.'),
+(8, 'Vile Assault', 'Perfurante', '12%HP', 'Causa dano pesado perfurante à 1 inimigo. Bônus de dano a inimigos caídos.'),
+(9, 'Maziodyne', 'Eletricidade', '32SP', 'Causa dano elétrico pesado/ Choques todos os inimigo.'),
+(10, 'Elec Amp', 'Passiva', '-', 'Fortalece muito ataques elétricos (50%)'),
+(11, 'Thunder Reign', 'Eletricidade', '32SP', 'Causa dano elétrico gravíssimo/ Choque à 1 Inimigo.'),
+(12, 'Spell Master', 'Passiva', '-', 'Corta pela metade o custo das skills mágicas'),
+(13, 'Bash', 'Impacto', '7%HP', 'Causa dano leve de impacto à 1 inimigo'),
+(14, 'Agi', 'Fogo', '3SP', 'Causa leve dano de fogo à um inimigo'),
+(15, 'Tarunda', 'Buff/Debuff', '6SP', 'Diminui o poder de ataque de 1 inimigo por 3 turnos');
 
 -- --------------------------------------------------------
 
@@ -84,11 +95,11 @@ INSERT INTO `lista_habilidade` (`id_habilidade`, `nome_habilidade`, `tipo_habili
 
 CREATE TABLE `persona` (
   `id_persona` int(11) NOT NULL,
-  `nome_persona` varchar(30) COLLATE latin1_general_cs NOT NULL,
-  `perfil_persona` varchar(40) COLLATE latin1_general_cs NOT NULL,
-  `arcano` varchar(15) COLLATE latin1_general_cs NOT NULL,
+  `nome_persona` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `perfil_persona` varchar(40) CHARACTER SET utf8 NOT NULL,
+  `arcano` varchar(15) CHARACTER SET utf8 NOT NULL,
   `nivel` int(11) NOT NULL,
-  `descricao` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `descricao` varchar(250) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
 --
@@ -96,9 +107,9 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id_persona`, `nome_persona`, `perfil_persona`, `arcano`, `nivel`, `descricao`) VALUES
-(1, 'Orpheus', '../img/compendium/orpheus.png', 'Fool', 1, 'Um poeta da mitologia grega habilidoso com a lira. Ele tentou recuperar sua esposa, Eurydice, de Hades, mas ela desapareceu quando ele olhou para tr?s antes de chegar ? superf?cie.'),
+(1, 'Orpheus', '../img/compendium/orpheus.png', 'Fool', 1, 'Um poeta da mitologia grega habilidoso com a lira. Ele tentou recuperar sua esposa, Eurydice, de Hades, mas ela desapareceu quando ele olhou para trás antes de chegar à superfície.'),
 (2, 'Odin', '../img/compendium/odin.png', 'Emperor', 57, 'No mito nórdico, ele é o pai dos deuses e o deus da sabedoria. Ele monta seu cavalo de oito pernas Sleipnir, carregando sua lança Gungnir e usando seu anel Draupnir.'),
-(3, 'Jack Frost', '../img/compendium/jack_frost.png', 'Magician', 8, 'Uma fada de inverno de ascendência européia. Normalmente uma criatura inocente, mas se for provocado, ele matará sua vítima cobrindo-a na neve');
+(3, 'Jack Frost', '../img/compendium/jack_frost.png', 'Magician', 8, 'Uma fada de inverno de ascendência européia. Normalmente uma criatura inocente, mas se for provocado, ele matará sua vítima cobrindo-a na neve.');
 
 -- --------------------------------------------------------
 
@@ -119,7 +130,18 @@ INSERT INTO `persona_habilidade` (`id_persona_hab`, `id_habilidade_per`) VALUES
 (3, 1),
 (3, 2),
 (3, 3),
-(3, 4);
+(3, 4),
+(3, 5),
+(3, 6),
+(2, 7),
+(2, 8),
+(2, 9),
+(2, 10),
+(2, 11),
+(2, 12),
+(1, 13),
+(1, 14),
+(1, 15);
 
 -- --------------------------------------------------------
 
@@ -213,7 +235,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `lista_habilidade`
 --
 ALTER TABLE `lista_habilidade`
-  MODIFY `id_habilidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_habilidade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `persona`
