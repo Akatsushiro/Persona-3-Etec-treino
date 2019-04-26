@@ -1,0 +1,18 @@
+table{
+    width: 90%;
+    margin-left: 5%;
+    border: 3px solid black;
+}
+tr{
+    background-color: rgba(137, 43, 226, 0.747);
+    border: 3px solid rgb(255, 0, 0);
+}
+td{
+    font-family: 'comumPersona', arial, monospace;
+    width: 10%;
+    font-size: 30px;
+    text-align: center;
+    border-top: 3px solid black;
+    z-index: -1;
+    padding-top: 5px;
+}
