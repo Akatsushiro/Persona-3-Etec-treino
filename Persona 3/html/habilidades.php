@@ -27,15 +27,15 @@
                     $custo = $coluna['custo'];
                     $rank  = $coluna['rank'];
                     $desc  = $coluna['descricao_habilidade'];
-                    
+
                     echo"
                     <tr>
-                        <td>$nome</td>
-                        <td>$tipo</td>
-                        <td>$custo</td>
-                        <td>$rank</td>
-                        <td>$desc</td>
-                    </tr>";	
+                        <td class = 'nome_h'>$nome</td>
+                        <td class = 'tipo_h'>$tipo</td>
+                        <td class = 'custo_h'>$custo</td>
+                        <td class = 'rank_h'>$rank</td>
+                        <td class = 'desc_h'>$desc</td>
+                    </tr>";
                 }
             ?>
         </table>
