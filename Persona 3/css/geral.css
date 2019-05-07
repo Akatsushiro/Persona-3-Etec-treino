@@ -5,8 +5,9 @@
     font-family: comumPersona;
     src: url('../fonts/february.otf');
 
-    font-family: titulo;
-    src: url('../fonts/p3.ttf');  
+    font-family: P3;
+    src: url("../fonts/p3.ttf");  
+
     font-family: p5;
     src: url('../fonts/p5.ttf');
 }

@@ -1,31 +1,43 @@
-﻿/*imagem inicial do header que fica atras do texto de abertura*/
-.imagem_abertura{
+﻿/*define o tamanho da imagem inicial do Header*/
+#abertura img{
     width: 100%;
     height: 500px;
-    background-image: url('../img/img_abertura.webp');
-    background-size: 100% 500px;
 }
-/*Personaliza e posiciona o texto de entrada "Persona 3 The tower Wait Us"*/
+/*alinhamento e fonte do texto -> "Persona 3 The tower Wait Us" do Header*/
 .abertura_logo_text{
-    position: absolute;
-    padding: 25px;
-    background-color: rgba(0, 0, 0, 0.158);
-    width: 20%;
     text-align: center;
-    border: 7px double rgba(5, 134, 255, 0.5);
-    margin-top: 15%;
-    margin-left: 38%;
-/*----------------------------------------*/
-    font-family: 'titulo', Arial, monospace;
-    font-size: 180%;
-    color: rgb(253, 102, 2);
+    /*----------------------------------------*/
+    font-family: 'P3', Arial, monospace;
 }
 
-/*efeito de troca de cor ao passar o ponteiro do mouse por cima das palavras do nav*/
-.decoracao:hover{
-    text-decoration: none;
-    color: rgb(97, 97, 97);
+.scrollspy_agradecimentos_home{
+    /*Esta parte do CSS é obrigatória para o funcionamento do scrollspy*/
+    position: relative;
+    overflow: auto;
+    height: 257px;
+    /*---------------------------------------*/
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: justify;
+    padding: 10px;
 }
+.navbar_agradecimentos_menu_lateral{
+    border-radius: 10px;
+    background-color: #090081;
+}
+.scroll-mobile-type{
+    display: none;
+}
+
+@media only screen and (max-width: 991px){
+    .scroll-desktop-type{
+        display: none;
+    }
+    .scroll-mobile-type{
+        display: initial;
+    }
+}
+
 /*posiciona a barra de acesso/Nav*/
 .barra_acesso{
     background-color: rgba(146, 197, 255, 0.9);
@@ -86,4 +98,22 @@
     border-radius: 10px;
     background-color: rgb(245, 241, 225);
     padding: 10px;
+}
+.barra_de_pesquisa{
+    border-radius: 10px; 
+    padding: 5px;
+    display: inline-block;
+}
+@media only screen and (max-width: 650px) {
+    .barra_de_pesquisa {
+      display: none;
+    }
+}
+.pesquisa_mobile_bar{
+    display: none;
+}
+@media only screen and (max-width: 650px) {
+    .pesquisa_mobile_bar{
+      display: inline-block;
+    }
 }
