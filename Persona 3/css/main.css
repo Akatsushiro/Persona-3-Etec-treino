@@ -38,6 +38,10 @@
     }
 }
 
+
+.principal_detonado{
+    width: 100%;
+}
 /*posiciona a barra de acesso/Nav*/
 .barra_acesso{
     background-color: rgba(146, 197, 255, 0.9);
