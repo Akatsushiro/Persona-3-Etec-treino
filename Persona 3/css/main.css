@@ -1,15 +1,12 @@
 ﻿/*define o tamanho da imagem inicial do Header*/
-
 #abertura img {
     width: 100%;
     height: 500px;
 }
 
 /*alinhamento e fonte do texto -> "Persona 3 The tower Wait Us" do Header*/
-
 .abertura_logo_text {
     text-align: center;
-    /*----------------------------------------*/
     font-family: 'P3', Arial, monospace;
 }
 
@@ -24,7 +21,7 @@
     text-align: justify;
     padding: 10px;
 }
-
+/*Menu lateral de agradecimentos, funciona como um tipo de indice*/
 .navbar_agradecimentos_menu_lateral {
     border-radius: 10px;
     background-color: #090081;
