@@ -114,3 +114,38 @@ body{
     color: azure;
     font-family: 'p5', Courier, monospace;
 }
+
+/*Garante que nenhuma row passe do limite dA TELA*/
+.tamanho{
+    max-width: 100vw;
+}
+/*Referente a barra de elementos,
+torna a pagina mais responsiva*/
+.persona_detalhes_elementos{
+    height: 10vh;
+}
+@media only screen and (max-width: 991px){
+    .persona_detalhes_elementos{
+        height: 20vh;
+    }
+}
+/*garante que os elementos cubram a sua div*/
+.elementos_caracteristcas img{
+    width: 70%;
+}
+.elementos_caracteristcas tr{
+    color: azure;
+    font-size: 1em;
+    text-align: center;
+}
+.persona_detalhes_imagem{
+    height: 90vh;
+}
+@media only screen and (max-width: 991px){
+    .persona_detalhes_imagem{
+        height: 80vh;
+    }
+}
+body{
+    height: 100vh;
+}
