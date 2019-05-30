@@ -151,21 +151,49 @@ include "../php/conectar.php";
                 </div>
 
                 <div class="col-7 bg-warning">
-                    <img src=<?php echo $img ?> class="imagem_persona col-12 my-5">
+                    <img src=<?php echo $img ?> class="imagem_persona col-12 mt-5">
                 </div>
             </div>
         </div>
-    </div>
-    <!--
-    <header>
-        <div class="nome_nv">
-            <label id='nome'></label>
-            <label id='nivel'></label>Lvl: <?php echo $nivel ?></label>
-            <br>
-            <label>Arcano: <?php echo $arcano ?></label>
+
+        <div class="col-3 bg-primary">
+            <div>
+                <div class="habilidade_slot"><?php echo $skill[0] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[1] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[2] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[3] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[4] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[5] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[6] ?></div>
+                <div class="habilidade_slot"><?php echo $skill[7] ?></div>
+            </div>
         </div>
-    </header>
--->
+        <div class="col-4 bg-danger">
+            <div class="status">
+                <div class="row">
+                    <div class="col-2 status_tipo">
+                        <label>St</label>
+                        <label>Ma</label>
+                        <label>En</label>
+                        <label>Ag</label>
+                        <label>Lu</label>
+                    </div>
+                    <div class="col-10 bg-primary">
+                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $forca ?>%,  rgba(153, 153, 153, 0.233) <?php echo $forca ?>%"><label><?php echo $forca ?></label></div>
+                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $magia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $magia ?>%"><label><?php echo $magia ?></label></div>
+                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $resistencia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $resistencia ?>%"><label><?php echo $resistencia ?></label></div>
+                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $agilidade ?>%,  rgba(153, 153, 153, 0.233) <?php echo $agilidade ?>%"><label><?php echo $agilidade ?></label></div>
+                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $sorte ?>%,  rgba(153, 153, 153, 0.233) <?php echo $sorte ?>%"><label><?php echo $sorte ?></label></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
     <section>
         <div class="descricao">
             <label><?php echo $descricao ?></label>
