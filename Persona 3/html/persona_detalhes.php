@@ -74,208 +74,148 @@ include "../php/conectar.php";
     }
 
     ?>
-    <div class="row tamanho">
-        <div class="col-lg-5 col-md-12 bg-p3-blue tamanho">
-            <!--Div com o elementos e seus valores que fica na parte superior esquerda-->
-            <div class="row persona_detalhes_elementos tamanho">
-                <table class="elementos_caracteristcas col-12 persona_detalhes_elementos tamanho">
-                    <!--Esta linha contem somente as imagens dos elementos-->
-                    <tr>
-                        <td>
-                            <img src="../img/ico/slash.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/impacto.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/perfurante.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/fogo.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/gelo.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/vento.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/eletricidade.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/luz.jpg">
-                        </td>
-                        <td>
-                            <img src="../img/ico/trevas.jpg">
-                        </td>
-                    </tr>
-                    <!--Nesta linha está os valores dos elementos-->
-                    <tr>
-                        <td>
-                            <label><?php echo $corte ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $impacto ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $perfurante ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $fogo ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $gelo ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $vento ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $eletricidade ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $luz ?></label>
-                        </td>
-                        <td>
-                            <label><?php echo $trevas ?></label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <!--Fim da Div dos elementos-->
-
-            <div class="row persona_detalhes_imagem">
-                <div class="col-5 bg-primary">
-                    <p><?php echo $nome ?></p>
-                    <p><?php echo $nivel ?></p>
-                    <p><?php echo $arcano ?></p>
+    <center>
+        <div class="row tamanho">
+            <div class="col-xl-5 col-lg-12 coluna_esquerda">
+                <!--Div com o elementos e seus valores que fica na parte superior esquerda-->
+                <div class="row bg-gradient-p3-blue persona_detalhes_elementos">
+                    <table class="col-12 persona_detalhes_elementos">
+                        <!--Esta linha contem somente as imagens dos elementos-->
+                        <tr>
+                            <td>
+                                <img src="../img/ico/slash.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/impacto.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/perfurante.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/fogo.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/gelo.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/vento.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/eletricidade.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/luz.jpg">
+                            </td>
+                            <td>
+                                <img src="../img/ico/trevas.jpg">
+                            </td>
+                        </tr>
+                        <!--Nesta linha está os valores dos elementos-->
+                        <tr>
+                            <td>
+                                <label><?php echo $corte ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $impacto ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $perfurante ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $fogo ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $gelo ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $vento ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $eletricidade ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $luz ?></label>
+                            </td>
+                            <td>
+                                <label><?php echo $trevas ?></label>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
+                <!--Fim da Div dos elementos-->
 
-                <div class="col-7 bg-warning">
-                    <img src=<?php echo $img ?> class="imagem_persona col-12 mt-5">
-                </div>
-            </div>
-        </div>
+                <!--Aqui está a imagem o nome e os detalhes mais importantes da persona-->
+                <div class="row persona_detalhes_imagem">
 
-        <div class="col-3 bg-primary">
-            <div>
-                <div class="habilidade_slot"><?php echo $skill[0] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[1] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[2] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[3] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[4] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[5] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[6] ?></div>
-                <div class="habilidade_slot"><?php echo $skill[7] ?></div>
-            </div>
-        </div>
-        <div class="col-4 bg-danger">
-            <div class="status">
-                <div class="row">
-                    <div class="col-2 status_tipo">
-                        <label>St</label>
-                        <label>Ma</label>
-                        <label>En</label>
-                        <label>Ag</label>
-                        <label>Lu</label>
+                    <!--Contem o nome, nivel e arcano da persona-->
+                    <div class="col-5 bg-primary">
+                        <p><h1><?php echo $nome ?></h1></p>
+                        <p>Nível: <?php echo $nivel ?></p>
+                        <p>
+                            <?php echo $arcano ?><br><br>
+                            <img src="../img/ico/<?php echo $arcano ?>.png"
+                        </p>
                     </div>
-                    <div class="col-10 bg-primary">
-                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $forca ?>%,  rgba(153, 153, 153, 0.233) <?php echo $forca ?>%"><label><?php echo $forca ?></label></div>
-                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $magia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $magia ?>%"><label><?php echo $magia ?></label></div>
-                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $resistencia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $resistencia ?>%"><label><?php echo $resistencia ?></label></div>
-                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $agilidade ?>%,  rgba(153, 153, 153, 0.233) <?php echo $agilidade ?>%"><label><?php echo $agilidade ?></label></div>
-                        <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $sorte ?>%,  rgba(153, 153, 153, 0.233) <?php echo $sorte ?>%"><label><?php echo $sorte ?></label></div>
+
+                    <!--Contem a imagem da persona-->
+                    <div class="col-7">
+                        <img src=<?php echo $img ?> class="imagem_persona col-12 mt-5">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 coluna_central">
+                <h2 class="texto">Descrição</h2>
+                <div class="container-fluid descricao">
+                    <label><?php echo $descricao ?></label>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-12 coluna_direita">
+
+                <h2 class="texto">Status</h2>
+                <div class="barra_status">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $forca ?>%" aria-valuemin="0" aria-valuemax="100"><?php echo $forca ?></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $magia ?>%" aria-valuemin="0" aria-valuemax="100"><?php echo $magia ?></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $resistencia ?>%" aria-valuemin="0" aria-valuemax="100"><?php echo $resistencia ?></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $agilidade ?>%" aria-valuemin="0" aria-valuemax="100"><?php echo $agilidade ?></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $sorte ?>%" aria-valuemin="0" aria-valuemax="100"><?php echo $sorte ?></div>
                     </div>
                 </div>
 
+
+
+                <div class="habilidades">
+                    <div class="habilidade_slot"><?php echo $skill[0] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[1] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[2] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[3] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[4] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[5] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[6] ?></div>
+                    <div class="habilidade_slot"><?php echo $skill[7] ?></div>
+                </div>
+
+
+
+
+
             </div>
         </div>
-
-    </div>
-
+    </center>
 
 
     <section>
-        <div class="descricao">
-            <label><?php echo $descricao ?></label>
-        </div>
 
-        <div class="status">
-            <div class="status_lbl">
-                <label>St</label>
-                <label>Ma</label>
-                <label>En</label>
-                <label>Ag</label>
-                <label>Lu</label>
-            </div>
-            <?php
-            ?>
-            <div class="status_num">
-                <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $forca ?>%,  rgba(153, 153, 153, 0.233) <?php echo $forca ?>%"><label><?php echo $forca ?></label></div>
-                <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $magia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $magia ?>%"><label><?php echo $magia ?></label></div>
-                <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $resistencia ?>%,  rgba(153, 153, 153, 0.233) <?php echo $resistencia ?>%"><label><?php echo $resistencia ?></label></div>
-                <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $agilidade ?>%,  rgba(153, 153, 153, 0.233) <?php echo $agilidade ?>%"><label><?php echo $agilidade ?></label></div>
-                <div class="status_bar" style="background: linear-gradient(to right, rgb(76, 5, 158)  <?php echo $sorte ?>%,  rgba(153, 153, 153, 0.233) <?php echo $sorte ?>%"><label><?php echo $sorte ?></label></div>
-            </div>
-        </div>
-        <div class="habilidades">
-            <div class="habilidade_slot"><?php echo $skill[0] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[1] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[2] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[3] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[4] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[5] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[6] ?></div>
-            <div class="habilidade_slot"><?php echo $skill[7] ?></div>
-        </div>
-
-        <div class="caracteristicas">
-            <!-- elemento: corte-->
-            <div class="elemento">
-                <img src="../img/ico/slash.jpg"><br>
-                <label><?php echo $corte ?></label>
-            </div>
-            <!--elemento: impacto-->
-            <div class="elemento">
-                <img src="../img/ico/impacto.jpg"><br>
-                <label><?php echo $impacto ?></label>
-            </div>
-            <!--elemento: perfurante-->
-            <div class="elemento">
-                <img src="../img/ico/perfurante.jpg"><br>
-                <label><?php echo $perfurante ?></label>
-            </div>
-            &nbsp
-            <!--elemento: fogo-->
-            <div class="elemento">
-                <img src="../img/ico/fogo.jpg"><br>
-                <label><?php echo $fogo ?></label>
-            </div>
-            <!--elemento:  gelo-->
-            <div class="elemento">
-                <img src="../img/ico/gelo.jpg"><br>
-                <label><?php echo $gelo ?></label>
-            </div>
-            <!--elemento: eletricidade-->
-            <div class="elemento">
-                <img src="../img/ico/eletricidade.jpg"><br>
-                <label><?php echo $eletricidade ?></label>
-            </div>
-            <!--elemento: vento-->
-            <div class="elemento">
-                <img src="../img/ico/vento.jpg"><br>
-                <label><?php echo $vento ?></label>
-            </div>
-            <!--elemento: luz-->
-            <div class="elemento">
-                <img src="../img/ico/luz.jpg"><br>
-                <label><?php echo $luz ?></label>
-            </div>
-            <!--elemento: trevas-->
-            <div class="elemento">
-                <img src="../img/ico/trevas.jpg"><br>
-                <label><?php echo $trevas ?></label>
-            </div>
-        </div>
     </section>
     <script src="../node/node_modules/jquery/dist/jquery.js"></script>
     <script src="../node/node_modules/popper.js/dist/umd/popper.js"></script>
