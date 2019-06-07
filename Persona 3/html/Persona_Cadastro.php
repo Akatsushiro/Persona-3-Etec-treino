@@ -1,0 +1,416 @@
+<!Doctype html>
+<html lang="pt-br">
+<?php
+include "../php/conectar.php";
+?>
+
+<head>
+    <meta charset="utf-8">
+    <title>Persona 3</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../node/node_modules/bootstrap//compiler/bootstrap.css">
+    <!--esse aqui é para chamar o css-->
+    <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../css/geral.css" type="text/css">
+</head>
+<style>
+    table {
+        background-color: rgb(10, 100, 200);
+    }
+
+    td {
+        padding: 10px;
+        margin: 4px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <section>
+        <center>
+            <form enctype="multipart/form-data" method="post" action="../php/Salvar_persona.php">
+                <!-- Usa o "name" nome para chamar o valor digitado no arquivo php informado no action-->
+                <label>Nome Persona: </label> <input type="text" name="nome" required>
+                <br>
+                <br>
+                <label>Arcano: <br></label> <input type="text" name="arcano" value="Fool" required>
+                <br>
+                <br>
+                <label>Tipo:</label> <input type="text" name="tipo" required>
+                <br>
+                <br>
+                <label>Nível: </label> <input type="number" name="nivel" required>
+                <br>
+                <br>
+                <label>Descrição </label> <input type="text" name="descricao" required>
+                <br>
+                <br>
+                <label>Imagem da Persona: </label> <input type="file" name="imagem" id="excecao" required>
+                <br>
+                <br>
+                <br>
+                <label>Corte: </label>
+                <select name="corte" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Perfurante: </label>
+                <select name="perfurante" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Impacto: </label>
+                <select name="impacto" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Fogo: </label>
+                <select name="fogo" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Gelo: </label>
+                <select name="gelo" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Vento: </label>
+                <select name="vento" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Eletricidade: </label>
+                <select name="eletricidade" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Luz: </label>
+                <select name="luz" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Trevas: </label>
+                <select name="trevas" required>
+                    <option value="-">-</option>
+                    <option value="WK">Weak</option>
+                    <option value="DRN">Drain</option>
+                    <option value="NUL">Null</option>
+                    <option value="STR">Resist</option>
+                </select>
+                <br>
+                <br>
+                <label>Força: </label> <input type="number" name="forca" required>
+                <br>
+                <br>
+                <label>Magia: </label> <input type="number" name="magia" required>
+                <br>
+                <br>
+                <label>Resistência: </label> <input type="number" name="resistencia" required>
+                <br>
+                <br>
+                <label>Agilidade: </label> <input type="number" name="agilidade" required>
+                <br>
+                <br>
+                <label>Sorte: </label> <input type="number" name="sorte" required>
+                <br>
+                <br>
+                <table class="habilidades_lista">
+                    <tr class="slash">
+                        <td>
+                            <?php
+                            /*Pegasse as habilidades do banco de dados, e as listamos
+                            com checkbos, assim as selecionadas, são as habilidades da
+                            persona
+                            */
+                            //seleciona e listas as habilidades do tipo "Slash"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Slash'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+
+                        <td class="pierce">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Pierce'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+
+                        <td class="Strike">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Strike'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="fire">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Fire'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+
+                        <td class="Ice">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Ice'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Wind">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Wind'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Eletricity">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Eletricity'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Light">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Light'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Dark">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Dark'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Almighty">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Almighty'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td class="Enhance">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Enhance'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+
+                        <td class="Bad Status">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Bad Status'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                    <td class="Passive">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Passive'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Recovery">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Recovery'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                        <td class="Special">
+                            <?php
+                            //seleciona e listas as habilidades do tipo "Pierce"
+                            $dados = mysqli_query(
+                                $sql,
+                                "SELECT id_habilidade,
+                                        nome_habilidade
+                                    FROM `lista_habilidade` 
+                                    WHERE tipo_habilidade = 'Special'");
+                            while ($coluna = mysqli_fetch_array($dados)) {
+                                $id   = $coluna['id_habilidade'];
+                                $nome = $coluna['nome_habilidade'];
+                                echo "<p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id'></b></p>";
+                            }
+                            ?>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Faz o arquivo php informado no form ser executado-->
+                <button><b> Cadastrar! </b> </button> <br>
+            </form>
+        </center>
+    </section>
+</body>

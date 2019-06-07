@@ -6,8 +6,16 @@
 .texto{
     color: white;
 }
+.nivel{
+    font-size: 150%;
+}
 .habilidades{
     background-color: #563edd3d;
+}
+.arcano{
+    position: relative;
+    width: 100%;
+    max-height: 400px;
 }
 .coluna_direita{
     background-color: #2b63ff50;
@@ -18,7 +26,7 @@
 
 .habilidade_slot {
     border-bottom: 5px solid #010ca8;
-    font-size: 200%;
+    font-size: 150%;
     display: block;
     color: azure;
     font-family: 'p5', Courier, monospace;
@@ -41,8 +49,8 @@ torna a pagina mais responsiva*/
 .persona_detalhes_elementos {
     height: 10vh;
 }
-
-@media only screen and (max-width: 1140px) {
+/*ajuste para tamanho de tela mobile e menores*/
+@media only screen and (max-width: 1199px) {
     .persona_detalhes_elementos {
         height: 20vh;
     }
@@ -58,6 +66,9 @@ torna a pagina mais responsiva*/
     .progress {
         font-size: 200%;
         height: 50px;
+    }
+    .persona_detalhes_elementos tr {
+        font-size: 200%;
     }
 }
 

@@ -22,6 +22,7 @@ include "../php/conectar.php";
         $nome = $coluna['nome_persona'];
         $nivel = $coluna['nivel'];
         $arcano = $coluna['arcano'];
+        $tipo_skill = $coluna['tipo'];
         $descricao = $coluna['descricao'];
         $img = $coluna['perfil_persona'];
     }
@@ -150,11 +151,13 @@ include "../php/conectar.php";
                     <!--Contem o nome, nivel e arcano da persona-->
                     <div class="col-5 bg-primary">
                         <p><h1><?php echo $nome ?></h1></p>
-                        <p>Nível: <?php echo $nivel ?></p>
+                        <p class="nivel">Nível: <b><?php echo $nivel ?></b></p>
+                        <!--Aqui vem o arcano, que por meio da pesquisa no banco abre a imagem-->
                         <p>
-                            <?php echo $arcano ?><br><br>
-                            <img src="../img/ico/<?php echo $arcano ?>.png"
+                            <h2><?php echo $arcano ?></h2>
+                            <img src="../img/ico/<?php echo $arcano ?>.png" class="arcano">
                         </p>
+                        <p>Tipo: <b><?php echo $tipo_skill ?></b></p>
                     </div>
 
                     <!--Contem a imagem da persona-->
