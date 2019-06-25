@@ -55,7 +55,7 @@ Funções:
 OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e somente neste caso
 -->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-gradient-p3-blue">
-		<a class="navbar-brand h1 mb-0" href="#">P3</a>
+		<a class="navbar-brand h1 mb-0" href="html/perfil_page.php">P3</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
 			<span class="navbar-toggler-icon"></span>
@@ -520,7 +520,10 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 				</div>
 				<a href="html/logar.php" class="btn btn-primary btn-lg btn-block"><b>Logar</b></a>
 				<br>
-				<a href="html/cadastrar.php" class="btn btn-primary btn-lg btn-block"><b>Cadastrar</b></a>
+				<form enctype="multipart/form-data" method="post" action="html/cadastrar.php">
+					<input type="hidden" name="acesso" value="Fabio">
+					<button class="btn btn-primary btn-lg btn-block"><b>Cadastrar</b></button>
+				</form>
 			</div>
 		</div>
 	</section>

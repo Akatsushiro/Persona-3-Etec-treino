@@ -6,6 +6,7 @@
 	$login = $_POST['login'];
 	$senha = $_POST['senha'];
 	$rm    = $_POST['rm'];
+	$acesso= $_POST['acesso'];
 
 	//tratamento do nome da imagem
 	$imgDir   = '../img/usuarios/perfil/';
@@ -28,8 +29,8 @@
 		}else{
 			echo "Não foi possivel concluir o upload da imagem";
 	}
-		$sql->query("INSERT INTO usuarios(nome, email, login, senha, rm, img_perfil)
-		VALUES ('$nome', '$email', '$login', '$senha', '$rm', '$imagemUp')");
+		$sql->query("INSERT INTO usuarios(nome, email, login, senha, rm, img_perfil, acesso_lvl)
+		VALUES ('$nome', '$email', '$login', '$senha', '$rm', '$imagemUp', '$acesso')");
 		header("Location: ../index.html");
 	}
 ?>

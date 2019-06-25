@@ -9,6 +9,6 @@
     $sql->query("INSERT INTO lista_habilidade(nome_habilidade, tipo_habilidade, custo, `rank`, descricao_habilidade)
     VALUES ('$nome','$tipo','$custo','$rank','$descricao')");
 
-    header ("LOCATION: ../html/temp_habilidades.html")
+    header ("LOCATION: ../html/salvar_habilidades.html")
 
 ?>

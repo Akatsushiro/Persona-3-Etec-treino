@@ -1,0 +1,41 @@
+section{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    max-width: 100vw;
+    overflow: unset;
+
+}
+table {
+    position: relative;
+    background-color: rgb(10, 100, 200);
+    max-width: 100vw;
+    width: 90vw;
+    margin-left: 2vw;
+}
+
+td {
+    padding: 10px;
+    margin: 4px;
+    border: 2px solid black;
+}
+h1{
+    background-color: blueviolet;
+    margin: 0;
+    width: 100%;
+    max-width: 100vw;
+}
+.status{
+    max-width: 50vw;
+}
+.persona_dados{
+    max-width: 50vw;
+}
+.row{
+    max-width: 100vw;
+}
+.elementos{
+    width: 100vw;
+}

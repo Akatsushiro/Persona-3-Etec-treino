@@ -49,6 +49,7 @@ nav{
     z-index: 1;
     background-color: #e1d9ee;
     border-bottom: 5px solid #ff0000;
+    width: 100%;
 }
 .lateral_opcoes:hover{
     display: block;

@@ -1,6 +1,6 @@
 <?php
 include "../php/sessao.php";
-if(!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 1){
+if (!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 0) {
   echo "<script>alert('Erro de Login, logue-se novemente');</script>";
   header("Location: logar.php");
 }
@@ -36,11 +36,16 @@ if(!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 1){
       </label>
       <div class="opcoes_all">
         <div class="opcoes">
-          <a href="../php/excluir_persona.php" class="decoracao | lateral_opcoes">Detalhes</a>
-          <a href="#" class="decoracao | lateral_opcoes">Atualizar</a>
-          <a href="#" class="decoracao | lateral_opcoes">Fusão</a>
-          <a href="#" class="decoracao | lateral_opcoes">Loja</a>
-          <a href="#" class="decoracao | lateral_opcoes">Requests</a>
+          <button href="excluir_persona_listar.php" class="decoracao | lateral_opcoes">Deletar Persona</button>
+          <button href="listar_atualizar_persona.php" class="decoracao | lateral_opcoes">Atualizar Persona</button>
+          <button href="persona_Cadastro.php" class="decoracao | lateral_opcoes">Cadastrar Persona</button>
+          <button href="salvar_habilidades.html" class="decoracao | lateral_opcoes">Nova Habilidade</button>
+          <button href="#" class="decoracao | lateral_opcoes">Excluir Habilidade</button>
+          <button href="#" class="decoracao | lateral_opcoes">Alterar Habilidade</button>
+          <form enctype="multipart/form-data" method="post" action="cadastrar.php">
+            <input type="hidden" name="acesso" value="Quati">
+            <button class="decoracao | lateral_opcoes">Cadastrar ADM</button>
+          <form>
         </div>
       </div>
     </nav>
@@ -59,7 +64,6 @@ if(!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 1){
           <?php echo $email; ?>
         </label>
         <a href='alterar.php?id=<?php echo $id; ?>' class="btn btn-warning">alterar</a>
-        <a href='../php/apagar.php?id=<?php echo $id ?>' class="btn btn-danger">Apagar</a>
       </div>
       <div class="conteudo">
         <br>
