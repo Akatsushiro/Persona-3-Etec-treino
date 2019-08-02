@@ -68,11 +68,13 @@ include "../php/conectar.php";
             </div>
 
             <div class="elementos bg-danger py-3">
-                <center>
-                    <?php
-                    $habilidade_tipo = array("corte", "perfurante", "impacto", "fogo", "gelo", "vento", "eletricidade", "luz", "trevas");
-                    foreach ($habilidade_tipo as $tipo) {
-                        echo "
+
+            </div>
+            <center>
+                <?php
+                $habilidade_tipo = array("corte", "perfurante", "impacto", "fogo", "gelo", "vento", "eletricidade", "luz", "trevas");
+                foreach ($habilidade_tipo as $tipo) {
+                    echo "
                         <label>" . ucfirst($tipo) . ":</label>
                         <select name=$tipo required>
                             <option value='-'>-</option>
@@ -81,10 +83,9 @@ include "../php/conectar.php";
                             <option value='NUL'>Null</option>
                             <option value='STR'>Resist</option>
                         </select>";
-                    }
-                    ?>
-                </center>
-            </div>
+                }
+                ?>
+            </center>
             <center>
                 <table class="table table-sm px-2">
                     <tr class="slash">

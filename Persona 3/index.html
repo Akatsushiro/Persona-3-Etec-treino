@@ -2,43 +2,43 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="utf-8">
-	<title>Persona 3</title>
-	<!--Bootstrap-->
-	<link rel="stylesheet" href="node/node_modules/bootstrap//compiler/bootstrap.css">
-	<!--esse aqui é para chamar o css-->
-	<link rel="stylesheet" href="css/normalize.css" type="text/css">
-	<link rel="stylesheet" href="css/geral.css" type="text/css">
-	<link rel="stylesheet" href="css/main.css" type="text/css">
+    <meta charset="utf-8">
+    <title>Persona 3</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="node/node_modules/bootstrap//compiler/bootstrap.css">
+    <!--esse aqui é para chamar o css-->
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/geral.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
 <body>
-	<!-- Aqui contém a parte superior do da pagina onde está o banner com a barra de perquisa
+    <!-- Aqui contém a parte superior do da pagina onde está o banner com a barra de perquisa
 	a recepção do usuario vem nesta parte.-->
-	<header>
-		<div id="abertura" class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<!--Imagem do Banner-->
-					<img src="img/img_abertura.webp" class="img-fluid d-block">
+    <header>
+        <div id="abertura" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!--Imagem do Banner-->
+                    <img src="img/img_abertura.webp" class="img-fluid d-block">
 
-					<div class="carousel-caption">
-						<!--Texto do topo dentro do banner-->
-						<h1 class="text-p3-blue abertura_logo_text">Persona 3</h1>
-						<h3 class="text-p3-blue">The Tower Wait Us!</h3>
-						<!--Barra de perquisa, aparece em dispositivos mobile-->
-						<form class="form-inline form-group bg-primary barra_de_pesquisa">
-							<input class="form-control mr-2" type="search" placeholder="Buscar...">
-							<button class="btn btn-outline-p3-blue" type="submit">Ok</button>
-						</form>
-					</div>
+                    <div class="carousel-caption">
+                        <!--Texto do topo dentro do banner-->
+                        <h1 class="text-p3-blue abertura_logo_text">Persona 3</h1>
+                        <h3 class="text-p3-blue">The Tower Wait Us!</h3>
+                        <!--Barra de perquisa, aparece em dispositivos mobile-->
+                        <form class="form-inline form-group bg-primary barra_de_pesquisa">
+                            <input class="form-control mr-2" type="search" placeholder="Buscar...">
+                            <button class="btn btn-outline-p3-blue" type="submit">Ok</button>
+                        </form>
+                    </div>
 
-				</div>
-			</div>
-		</div>
-	</header>
+                </div>
+            </div>
+        </div>
+    </header>
 
-	<!--Barra de menu principal, é através dela que se tem acesso a maioria das funcionalidades do 
+    <!--Barra de menu principal, é através dela que se tem acesso a maioria das funcionalidades do 
 Site.
 Funções: 
 - Compendium
@@ -54,528 +54,443 @@ Funções:
 
 OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e somente neste caso
 -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-gradient-p3-blue">
-		<a class="navbar-brand h1 mb-0" href="html/perfil_page.php">P3</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-gradient-p3-blue">
+        <a class="navbar-brand h1 mb-0" href="html/chefao.php">P3</a>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse justify-content-center" id="navbarSite">
-			<ul class="navbar-nav">
-				<!--Itens do navbar da main-->
-				<li class="nav-item">
-					<!--Menu dropdown Compendium-->
-					<ul class="navbar-nav">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="compendium_nav_dropdown">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
+            <ul class="navbar-nav">
+                <!--Itens do navbar da main-->
+                <li class="nav-item">
+                    <!--Menu dropdown Compendium-->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="compendium_nav_dropdown">
 								Compendium
 							</a>
-							<div class="dropdown-menu bg-primary">
-								<!--Itens do DropDown-->
-								<a class="dropdown-item" href="html/compendium.php">Todas</a>
-								<a class="dropdown-item" href="html/compendium.php?tipo='Fool'">Fool</a>
-								<a class="dropdown-item" href="html/compendium.php?tipo='Magician'">Magician</a>
-								<a class="dropdown-item" href="html/compendium.php?tipo='Priestess'">Priestess</a>
-								<a class="dropdown-item" href="html/compendium.php?tipo='Empereor'">Empereor</a>
-								<a class="dropdown-item" href="html/compendium.php?tipo='Strenght'">Strenght</a>
-							</div>
-						</li>
-					</ul>
-				</li>
-				<!--Item do Navbar -> Elizabeth Quests -->
-				<li class="nav-item">
-					<a class="nav-link" href="html/quests.html">
+                            <div class="dropdown-menu bg-primary">
+                                <!--Itens do DropDown-->
+                                <a class="dropdown-item" href="html/compendium.php">Todas</a>
+                                <a class="dropdown-item" href="html/compendium.php?tipo='Fool'">Fool</a>
+                                <a class="dropdown-item" href="html/compendium.php?tipo='Magician'">Magician</a>
+                                <a class="dropdown-item" href="html/compendium.php?tipo='Priestess'">Priestess</a>
+                                <a class="dropdown-item" href="html/compendium.php?tipo='Empereor'">Empereor</a>
+                                <a class="dropdown-item" href="html/compendium.php?tipo='Strenght'">Strenght</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--Item do Navbar -> Elizabeth Quests -->
+                <li class="nav-item">
+                    <a class="nav-link" href="html/quests.html">
 						Elizabeth Quests
 					</a>
-				</li>
-				<!--Item do Navbar -> História -->
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+                </li>
+                <!--Item do Navbar -> História -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
 						História
 					</a>
-				</li>
-				<!--Item do Navbar -> Habilidades -->
-				<li class="nav-item">
-					<a class="nav-link" href="html/habilidades.php">
+                </li>
+                <!--Item do Navbar -> Habilidades -->
+                <li class="nav-item">
+                    <a class="nav-link" href="html/habilidades.php">
 						Habilidades
 					</a>
-				</li>
-				<!--Item do Navbar -> Equipamentos -->
-				<li class="nav-item">
-					<a class="nav-link" href="#">
+                </li>
+                <!--Item do Navbar -> Equipamentos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
 						Equipamentos
 					</a>
-				</li>
-				<!--Barra de pesquisa, aparece somente em dispositivos mobile-->
-				<li class="nav-item pesquisa_mobile_bar">
-					<form class="form-inline nav-link">
-						<input class="form-control mr-2" type="search" placeholder="Buscar...">
-						<button class="btn btn-primary" type="submit">Ok</button>
-					</form>
-				</li>
+                </li>
+                <!--Barra de pesquisa, aparece somente em dispositivos mobile-->
+                <li class="nav-item pesquisa_mobile_bar">
+                    <form class="form-inline nav-link">
+                        <input class="form-control mr-2" type="search" placeholder="Buscar...">
+                        <button class="btn btn-primary" type="submit">Ok</button>
+                    </form>
+                </li>
 
-			</ul>
-		</div>
-	</nav>
+            </ul>
+        </div>
+    </nav>
 
 
-	<!--Nesta div esta o scrollspy onde vão os agradecimentos
+    <!--Nesta div esta o scrollspy onde vão os agradecimentos
 	OBS: Tem CSS obrigatorio, olhar a classe -> "scrollspy_agradecimentos_home";
 	OBS: Somente Desktop -> Telas com menos de 992PX de largura usarão outro
 	-->
-	<div class="container my-2 scroll-desktop-type">
-		<!--<div class="row">
+    <div class="container my-2 scroll-desktop-type">
+        <!--<div class="row">
 			<div class="col-12 text-center my-5">
 				<h1 class="display-3">Bem Vindo!</h1>
 				<p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.</p>
 			</div>
 		</div>-->
 
-		<div class="row">
-			<!--Aqui esta o menu lateral, os titulos da seções estão contidos nos botões-->
-			<div class="col-3">
-				<nav id="vertical_nav" class=" navbar navbar_agradecimentos_menu_lateral bg-p3-blue">
-					<nav class="nav nav-pills flex-column">
-						<a class="nav-link active" href="#item1">Agradecimentos</a>
-						<!--Subtitulos de agradecimentos-->
-						<nav class="nav nav-pills flex-column ml-4 my-2">
-							<a class="nav-link" href="#item1-1">Path Shower</a>
-							<a class="nav-link" href="#item1-2">Atlus</a>
-							<a class="nav-link" href="#item1-3">Sony</a>
-						</nav>
-						<a class="nav-link" href="#item2">Motivações</a>
-						<a class="nav-link" href="#item3">Primeiros Passos</a>
-					</nav>
-				</nav>
-			</div>
-			<!--Aqui contém o texto dos agradecomentos linkado ao indice-->
-			<div class="col-9">
-				<!--Conteudo do scrollspy, -->
-				<div data-spy="scroll" data-target="#vertical_nav" data-offset="0"
-					class="scrollspy_agradecimentos_home bg-primary">
-					<!--texto de agradecimentos-->
-					<h4 id="item1">Agradeço</h4>
-					<p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
-						O Lorem Ipsum tem vindo a ser o texto padrão usado por estas
-						indústrias desde o ano de 1500, quando uma misturou os caracteres
-						de um texto para criar um espécime de livro. Este texto não só
-						sobreviveu 5 séculos, mas também o salto para a tipografia
-						electrónica, mantendo-se essencialmente inalterada. Foi popularizada
-						nos anos 60 com a disponibilização das folhas de Letraset, que
-						continham passagens com Lorem Ipsum, e mais recentemente com os
-						programas de publicação como o Aldus PageMaker que incluem versões
-						do Lorem Ipsum.</p>
-					<!--Texto de agradecimentos-Path Shower-->
-					<h4 id="item1-1">Path Shower</h4>
-					<p>É um fato estabelecido de que um leitor é distraído pelo conteúdo legível
-						de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem
-						Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do
-						uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas
-						de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum
-						como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar
-						muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos,
-						por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
-					<!--Texto de agradecimentos-Atlus-->
-					<h4 id="item1-2">Atlus</h4>
-					<p>Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto
-						aleatório. Tem raízes numa peça de literatura clássica em Latim, de
-						45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor
-						de Latim no Colégio Hampden-Sydney, na Virgínia, procurou uma das palavras
-						em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e
-						atravessando as cidades do mundo na literatura clássica, descobriu a sua
-						origem.
-					</p>
-					<!--Texto de agradecimentos-Sony-->
-					<h4 id="item1-3">Sony</h4>
-					<p>
-						Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum
-						t Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC.
-						Este livro é um tratado na teoria da ética, muito popular durante a
-						Renascença. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit
-						amet..." aparece de uma linha na secção 1.10.32.
-					</p>
-					<!--Texto de Motivações-->
-					<h4 id="item2">Motivações</h4>
-					<p>É um facto estabelecido de que um leitor é distraído pelo conteúdo
-						legível de uma página quando analisa a sua mancha gráfica. Logo, o uso
-						de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras,
-						ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto
-						legível. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior
-						parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias
-						que nem sequer parecem suficientemente credíveis.</p>
-					<!--Texto de Primeiros Passos-->
-					<h4 id="item3">Primeiros Passos</h4>
-					<p> Muitas ferramentas de publicação electrónica e editores de páginas web
-						usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão,
-						e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua
-						infância. Várias versões têm evoluído ao longo dos anos, por vezes por
-						acidente, por vezes propositadamente (como no caso do humor).</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            <!--Aqui esta o menu lateral, os titulos da seções estão contidos nos botões-->
+            <div class="col-3">
+                <nav id="vertical_nav" class=" navbar navbar_agradecimentos_menu_lateral bg-p3-blue">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link active" href="#item1">Agradecimentos</a>
+                        <!--Subtitulos de agradecimentos-->
+                        <nav class="nav nav-pills flex-column ml-4 my-2">
+                            <a class="nav-link" href="#item1-1">Path Shower</a>
+                            <a class="nav-link" href="#item1-2">Atlus</a>
+                            <a class="nav-link" href="#item1-3">Sony</a>
+                        </nav>
+                        <a class="nav-link" href="#item2">Motivações</a>
+                        <a class="nav-link" href="#item3">Primeiros Passos</a>
+                    </nav>
+                </nav>
+            </div>
+            <!--Aqui contém o texto dos agradecomentos linkado ao indice-->
+            <div class="col-9">
+                <!--Conteudo do scrollspy, -->
+                <div data-spy="scroll" data-target="#vertical_nav" data-offset="0" class="scrollspy_agradecimentos_home bg-primary">
+                    <!--texto de agradecimentos-->
+                    <h4 id="item1">Agradeço</h4>
+                    <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime
+                        de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham
+                        passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+                    <!--Texto de agradecimentos-Path Shower-->
+                    <h4 id="item1-1">Path Shower</h4>
+                    <p>É um fato estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de
+                        "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem
+                        ipsum" irá encontrar muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
+                    <!--Texto de agradecimentos-Atlus-->
+                    <h4 id="item1-2">Atlus</h4>
+                    <p>Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor de Latim no Colégio
+                        Hampden-Sydney, na Virgínia, procurou uma das palavras em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e atravessando as cidades do mundo na literatura clássica, descobriu a sua origem.
+                    </p>
+                    <!--Texto de agradecimentos-Sony-->
+                    <h4 id="item1-3">Sony</h4>
+                    <p>
+                        Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum t Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC. Este livro é um tratado na teoria da ética, muito popular durante a Renascença. A primeira linha de Lorem Ipsum,
+                        "Lorem ipsum dolor sit amet..." aparece de uma linha na secção 1.10.32.
+                    </p>
+                    <!--Texto de Motivações-->
+                    <h4 id="item2">Motivações</h4>
+                    <p>É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de
+                        "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias
+                        que nem sequer parecem suficientemente credíveis.</p>
+                    <!--Texto de Primeiros Passos-->
+                    <h4 id="item3">Primeiros Passos</h4>
+                    <p> Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância. Várias
+                        versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<!--
+    <!--
 		Versão mobile do Agradecimentos
 		OBS: Aparece somente em dispositivos com a tela de 992PX de largura ou menor; 
 	-->
-	<diV class="container my-2 scroll-mobile-type">
-		<div class="col-12">
-			<div data-spy="scroll" data-offset="0" class="scrollspy_agradecimentos_home bg-primary">
-				<h4 id="item1">Agradeço</h4>
-				<p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
-					O Lorem Ipsum tem vindo a ser o texto padrão usado por estas
-					indústrias desde o ano de 1500, quando uma misturou os caracteres
-					de um texto para criar um espécime de livro. Este texto não só
-					sobreviveu 5 séculos, mas também o salto para a tipografia
-					electrónica, mantendo-se essencialmente inalterada. Foi popularizada
-					nos anos 60 com a disponibilização das folhas de Letraset, que
-					continham passagens com Lorem Ipsum, e mais recentemente com os
-					programas de publicação como o Aldus PageMaker que incluem versões
-					do Lorem Ipsum.</p>
-				<!--Texto de agradecimentos-Path Shower-->
-				<h4 id="item1-1">Path Shower</h4>
-				<p>É um fato estabelecido de que um leitor é distraído pelo conteúdo legível
-					de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem
-					Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do
-					uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas
-					de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum
-					como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar
-					muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos,
-					por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
-				<!--Texto de agradecimentos-Atlus-->
-				<h4 id="item1-2">Atlus</h4>
-				<p>Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto
-					aleatório. Tem raízes numa peça de literatura clássica em Latim, de
-					45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor
-					de Latim no Colégio Hampden-Sydney, na Virgínia, procurou uma das palavras
-					em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e
-					atravessando as cidades do mundo na literatura clássica, descobriu a sua
-					origem.
-				</p>
-				<!--Texto de agradecimentos-Sony-->
-				<h4 id="item1-3">Sony</h4>
-				<p>
-					Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum
-					t Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC.
-					Este livro é um tratado na teoria da ética, muito popular durante a
-					Renascença. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit
-					amet..." aparece de uma linha na secção 1.10.32.
-				</p>
-				<!--Texto de Motivações-->
-				<h4 id="item2">Motivações</h4>
-				<p>É um facto estabelecido de que um leitor é distraído pelo conteúdo
-					legível de uma página quando analisa a sua mancha gráfica. Logo, o uso
-					de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras,
-					ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto
-					legível. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior
-					parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias
-					que nem sequer parecem suficientemente credíveis.</p>
-				<!--Texto de Primeiros Passos-->
-				<h4 id="item3">Primeiros Passos</h4>
-				<p> Muitas ferramentas de publicação electrónica e editores de páginas web
-					usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão,
-					e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua
-					infância. Várias versões têm evoluído ao longo dos anos, por vezes por
-					acidente, por vezes propositadamente (como no caso do humor).</p>
-			</div>
-		</div>
-	</div>
-	<!--Noticia sobre o Projeto re_fantasy-->
-	<div class="re_fantasy my-2 container" id="re_fantasy_aba">
-		<h1>Atlus anuncia novo projeto que promete ser inovador</h1>
-		<img src="img/re_fantasy.jpg" id="re_fantasy_img">
-		<p class="re_fantasy_text">
-			Quando se trata sobre criação, especialmente nos dias de hoje, eu acredito que
-			a natureza da mensagem do trabalho é importante. Eu não acho isso é utilizado no
-			entretenimento, no entanto, acredito que essas mensagens, qualquer que sejam,
-			tem a habilidade de mudar aqueles que as recebem. Enquanto a sociedade continuar
-			sendo composta por indivíduos, eu quero acreditar que esse dinamismo do trabalho
-			criativo pode mudar alguém.
-		</p>
-	</div>
-	<!--Aqui vai o conteudo principal do site-->
-	<section class="row principal_detonado">
-		<div class="col-lg-12 col-xl-9 detonado_meses">
-			<div id="detonado_meses_aba">
-				<!--Aqui vão os meses do ano com as instruções de como detonar o jogo-->
-				<h1 class="mx-5 my-5 titulo_tipo">Selecione um Mês:</h1>
-				<div class="row mx-2">
+    <diV class="container my-2 scroll-mobile-type">
+        <div class="col-12">
+            <div data-spy="scroll" data-offset="0" class="scrollspy_agradecimentos_home bg-primary">
+                <h4 id="item1">Agradeço</h4>
+                <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime
+                    de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens
+                    com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.</p>
+                <!--Texto de agradecimentos-Path Shower-->
+                <h4 id="item1-1">Path Shower</h4>
+                <p>É um fato estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo
+                    aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar
+                    muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
+                <!--Texto de agradecimentos-Atlus-->
+                <h4 id="item1-2">Atlus</h4>
+                <p>Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor de Latim no Colégio Hampden-Sydney,
+                    na Virgínia, procurou uma das palavras em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e atravessando as cidades do mundo na literatura clássica, descobriu a sua origem.
+                </p>
+                <!--Texto de agradecimentos-Sony-->
+                <h4 id="item1-3">Sony</h4>
+                <p>
+                    Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum t Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC. Este livro é um tratado na teoria da ética, muito popular durante a Renascença. A primeira linha de Lorem Ipsum,
+                    "Lorem ipsum dolor sit amet..." aparece de uma linha na secção 1.10.32.
+                </p>
+                <!--Texto de Motivações-->
+                <h4 id="item2">Motivações</h4>
+                <p>É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo
+                    aqui, conteúdo aqui", tornando-o texto legível. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer
+                    parecem suficientemente credíveis.</p>
+                <!--Texto de Primeiros Passos-->
+                <h4 id="item3">Primeiros Passos</h4>
+                <p> Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância. Várias
+                    versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).</p>
+            </div>
+        </div>
+    </div>
+    <!--Noticia sobre o Projeto re_fantasy-->
+    <div class="re_fantasy my-2 container" id="re_fantasy_aba">
+        <h1>Atlus anuncia novo projeto que promete ser inovador</h1>
+        <img src="img/re_fantasy.jpg" id="re_fantasy_img">
+        <p class="re_fantasy_text">
+            Quando se trata sobre criação, especialmente nos dias de hoje, eu acredito que a natureza da mensagem do trabalho é importante. Eu não acho isso é utilizado no entretenimento, no entanto, acredito que essas mensagens, qualquer que sejam, tem a habilidade
+            de mudar aqueles que as recebem. Enquanto a sociedade continuar sendo composta por indivíduos, eu quero acreditar que esse dinamismo do trabalho criativo pode mudar alguém.
+        </p>
+    </div>
+    <!--Aqui vai o conteudo principal do site-->
+    <section class="row principal_detonado">
+        <div class="col-lg-12 col-xl-9 detonado_meses">
+            <div id="detonado_meses_aba">
+                <!--Aqui vão os meses do ano com as instruções de como detonar o jogo-->
+                <h1 class="mx-5 my-5 titulo_tipo">Selecione um Mês:</h1>
+                <div class="row mx-2">
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_00.webp">
-							<div class="card-body">
-								<h4 class="card-title">Abril</h4>
-								<h6 class="card-subtitle text-muted">A torre te espera</h6>
-								<hr>
-								<p class="card-text">
-									Estranhos eventos, e um surto de sindrome de apatia na cidade,
-									a sua chegada, durante a noite surpreende, e da inicio a uma
-									jornada que mudará o mundo.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_00.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Abril</h4>
+                                <h6 class="card-subtitle text-muted">A torre te espera</h6>
+                                <hr>
+                                <p class="card-text">
+                                    Estranhos eventos, e um surto de sindrome de apatia na cidade, a sua chegada, durante a noite surpreende, e da inicio a uma jornada que mudará o mundo.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_01.webp">
-							<div class="card-body">
-								<h4 class="card-title">Maio</h4>
-								<h6 class="card-subtitle text-muted">SEES</h6>
-								<hr>
-								<p class="card-text">
-									A entrada para a SEES com o objetivo de explorar a
-									torre e acabar com a dark hour de uma vez por todas,
-									o primeiro guardião aparece, e a lua brilha alto no céu.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_01.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Maio</h4>
+                                <h6 class="card-subtitle text-muted">SEES</h6>
+                                <hr>
+                                <p class="card-text">
+                                    A entrada para a SEES com o objetivo de explorar a torre e acabar com a dark hour de uma vez por todas, o primeiro guardião aparece, e a lua brilha alto no céu.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_02.webp">
-							<div class="card-body">
-								<h4 class="card-title">Junho</h4>
-								<h6 class="card-subtitle text-muted">A lua brilha de novo!</h6>
-								<hr>
-								<p class="card-text">
-									O desaparecimento da aluna Fuuka Yamagishi deve ser solucionado,
-									novamente o perigo vem junto a lua, a batalha não será
-									simples, perder não é uma opção.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_02.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Junho</h4>
+                                <h6 class="card-subtitle text-muted">A lua brilha de novo!</h6>
+                                <hr>
+                                <p class="card-text">
+                                    O desaparecimento da aluna Fuuka Yamagishi deve ser solucionado, novamente o perigo vem junto a lua, a batalha não será simples, perder não é uma opção.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_03.webp">
-							<div class="card-body">
-								<h4 class="card-title">Julho</h4>
-								<h6 class="card-subtitle text-muted">Nice Body!!!</h6>
-								<hr>
-								<p class="card-text">
-									A lua agora avisa o perigo eminente, influenciados
-									pelo guardião do arcano dos Amantes faz com que eventos
-									estranhos aconteçam.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_03.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Julho</h4>
+                                <h6 class="card-subtitle text-muted">Nice Body!!!</h6>
+                                <hr>
+                                <p class="card-text">
+                                    A lua agora avisa o perigo eminente, influenciados pelo guardião do arcano dos Amantes faz com que eventos estranhos aconteçam.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_04.webp">
-							<div class="card-body">
-								<h4 class="card-title">Agosto</h4>
-								<h6 class="card-subtitle text-muted">Strega</h6>
-								<hr>
-								<p class="card-text">
-									Aparece um novo inimigo a frente, mais fortes e sem
-									nenhum valor ético em suas ações, não desistirão até que
-									seu objetivo seja alcançado.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_04.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Agosto</h4>
+                                <h6 class="card-subtitle text-muted">Strega</h6>
+                                <hr>
+                                <p class="card-text">
+                                    Aparece um novo inimigo a frente, mais fortes e sem nenhum valor ético em suas ações, não desistirão até que seu objetivo seja alcançado.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_05.webp">
-							<div class="card-body">
-								<h4 class="card-title">Setembro</h4>
-								<h6 class="card-subtitle text-muted">Eu não vou desistir de você</h6>
-								<hr>
-								<p class="card-text">
-									Junpei e Chidori se encontram por puro acaso, mas tal encontro
-									muda tudo, as coisas nunca serão simples, mas me nego a desistir de você.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_05.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Setembro</h4>
+                                <h6 class="card-subtitle text-muted">Eu não vou desistir de você</h6>
+                                <hr>
+                                <p class="card-text">
+                                    Junpei e Chidori se encontram por puro acaso, mas tal encontro muda tudo, as coisas nunca serão simples, mas me nego a desistir de você.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_06.webp">
-							<div class="card-body">
-								<h4 class="card-title">Outubro</h4>
-								<h6 class="card-subtitle text-muted">Não valeu a pena</h6>
-								<hr>
-								<p class="card-text">
-									Ken deseja resolver de uma vez os problemas de seu
-									passado, Shinjiro não deixará que seja tão simples,
-									não posso cometer aquele erro denovo.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_06.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Outubro</h4>
+                                <h6 class="card-subtitle text-muted">Não valeu a pena</h6>
+                                <hr>
+                                <p class="card-text">
+                                    Ken deseja resolver de uma vez os problemas de seu passado, Shinjiro não deixará que seja tão simples, não posso cometer aquele erro denovo.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_07.webp">
-							<div class="card-body">
-								<h4 class="card-title">Novembvro</h4>
-								<h6 class="card-subtitle text-muted">Fim?</h6>
-								<hr>
-								<p class="card-text">
-									É chegada a hora de acertar as contas com Strega, e derrotar
-									o ultimo guardião, assim livrando o mundo de vez da Dark Hour,
-									pois essa lua será a ultima.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_07.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Novembvro</h4>
+                                <h6 class="card-subtitle text-muted">Fim?</h6>
+                                <hr>
+                                <p class="card-text">
+                                    É chegada a hora de acertar as contas com Strega, e derrotar o ultimo guardião, assim livrando o mundo de vez da Dark Hour, pois essa lua será a ultima.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_08.webp">
-							<div class="card-body">
-								<h4 class="card-title">Dezembro</h4>
-								<h6 class="card-subtitle text-muted">Desespero</h6>
-								<hr>
-								<p class="card-text">
-									A morte eminente e a verdade sobre Yuki, as perdas que temia
-									voltaram a me atormentar, pois tenho medo da sua morte meu amigo.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_08.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Dezembro</h4>
+                                <h6 class="card-subtitle text-muted">Desespero</h6>
+                                <hr>
+                                <p class="card-text">
+                                    A morte eminente e a verdade sobre Yuki, as perdas que temia voltaram a me atormentar, pois tenho medo da sua morte meu amigo.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_09.webp">
-							<div class="card-body">
-								<h4 class="card-title">Janeiro</h4>
-								<h6 class="card-subtitle text-muted">
-									Você realmente foi um convidado extraordinario.
-								</h6>
-								<hr>
-								<p class="card-text">
-									Não vou perder mais nada que amo, vou lutar até o fim,
-									seja humano, Deus ou demonios, não vou deixar que tirem mais nada de mim.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_09.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Janeiro</h4>
+                                <h6 class="card-subtitle text-muted">
+                                    Você realmente foi um convidado extraordinario.
+                                </h6>
+                                <hr>
+                                <p class="card-text">
+                                    Não vou perder mais nada que amo, vou lutar até o fim, seja humano, Deus ou demonios, não vou deixar que tirem mais nada de mim.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_10.webp">
-							<div class="card-body">
-								<h4 class="card-title">Calculadora</h4>
-								<h6 class="card-subtitle text-muted">Wild Card</h6>
-								<p class="card-text">
-									<hr>
-									<br>
-									Calcule as personas que deseja criar.
-									<br>
-									<br>
-									<br>
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_10.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Calculadora</h4>
+                                <h6 class="card-subtitle text-muted">Wild Card</h6>
+                                <p class="card-text">
+                                    <hr>
+                                    <br> Calcule as personas que deseja criar.
+                                    <br>
+                                    <br>
+                                    <br>
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="col-lg-4 col-sm-6 my-2">
-						<div class="card">
-							<img class="card-img-top" src="img/card_11.webp">
-							<div class="card-body">
-								<h4 class="card-title">Desafios</h4>
-								<h6 class="card-subtitle text-muted">O mais forte Inimigo</h6>
-								<hr>
-								<p class="card-text">
-									Existem muitos desafios na subida desta torre, eu não vou parar
-									seja o que for que entrar no meu caminho, eu irei superar,
-									idependente da dor que venha com isso.
-								</p>
-								<a href="#" class="btn btn-outline-p3-blue">Detonado</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                    <div class="col-lg-4 col-sm-6 my-2">
+                        <div class="card">
+                            <img class="card-img-top" src="img/card_11.webp">
+                            <div class="card-body">
+                                <h4 class="card-title">Desafios</h4>
+                                <h6 class="card-subtitle text-muted">O mais forte Inimigo</h6>
+                                <hr>
+                                <p class="card-text">
+                                    Existem muitos desafios na subida desta torre, eu não vou parar seja o que for que entrar no meu caminho, eu irei superar, idependente da dor que venha com isso.
+                                </p>
+                                <a href="#" class="btn btn-outline-p3-blue">Detonado</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</div>
-		<div class="col-xl-3 col-lg-12 container-fluid bg-p3-blue">
-			<div class="mt-3">
-				<div>
-					<img src="img/archer.webp" class="img-fluid" id="test_img_lateral">
-					<h2 class="display-5 titulo_tipo">Feito por:<br>Patrick Dantas</h2>
-					<br>
-				</div>
-				<a href="html/logar.php" class="btn btn-primary btn-lg btn-block"><b>Logar</b></a>
-				<br>
-				<form enctype="multipart/form-data" method="post" action="html/cadastrar.php">
-					<input type="hidden" name="acesso" value="Fabio">
-					<button class="btn btn-primary btn-lg btn-block"><b>Cadastrar</b></button>
-				</form>
-			</div>
-		</div>
-	</section>
-	<!--Fim da Main-->
+        </div>
+        <div class="col-xl-3 col-lg-12 container-fluid bg-p3-blue">
+            <div class="mt-3">
+                <div>
+                    <img src="img/archer.webp" class="img-fluid" id="test_img_lateral">
+                    <h2 class="display-5 titulo_tipo">Feito por:<br>Patrick Dantas</h2>
+                    <br>
+                </div>
+                <a href="html/logar.php" class="btn btn-primary btn-lg btn-block"><b>Logar</b></a>
+                <br>
+                <form enctype="multipart/form-data" method="post" action="html/cadastrar.php">
+                    <input type="hidden" name="acesso" value="Fabio">
+                    <button class="btn btn-primary btn-lg btn-block"><b>Cadastrar</b></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--Fim da Main-->
 
-	<!--Fim da Main-->
+    <!--Fim da Main-->
 
-	<footer class="page-footer">
-		<div class="row mx-auto">
-			<div class="col-md-12 col-lg-6">
-				<p class="col-lg-9 pl-2 my-5" style="color: white">
-					Agradeço a todos da ETEC JA que me ajudaram a concluir este site, pois foi
-					através de muitas tentativas, erros e consultas que ele podê ficar pronto.
-					Este foi um projeto que construi com intuito de puro estudo, e me ajudou
-					muito no meu crescimento como programador.
-					<br><br>
-					Espero um Remake de Persona 3 ! : )
-					<br>
-					<br>
-					<br>
-					<br>
-				</p>
-			</div>
-			<div class="col-md-12 col-lg-6 empresas">
-				<a href="#" class="ml-3"><img src="img/Atlus_Logo.png"></a>
-				<a href="#"><img src="img/sony.png"></a>
-				<a href="#"><img src="img/path_shower.png"></a>
-				<br><br>
-			</div>
-		</div>
-		<!-- ############################-->
-		<div class="rodape_ico py-1 justify-content-center bg-primary">
-			<center>
-				<div class="redes_rodape">
-					<a href="#"><img src="img/git.png"></a>
-					<a href="#"><img src="img/linkedin.png"></a>
-					<a href="#"><img src="img/facebook.png"></a>
-				</div>
-			</center>
-		</div>
-		<div class="text-center py-1 rodape_direitos_autorais">
-			©2006-2008 ATLUS<br>
-			SHIN MEGAMI TENSEI, SMT, and Persona are registered trademarks of Atlus U.S.A., Inc.
-			PlayStation and the "PS" Family logo<br>
-			are registered trademarks of Sony Computer Entertainment Inc.
-		</div>
+    <footer class="page-footer">
+        <div class="row mx-auto">
+            <div class="col-md-12 col-lg-6">
+                <p class="col-lg-9 pl-2 my-5" style="color: white">
+                    Agradeço a todos da ETEC JA que me ajudaram a concluir este site, pois foi através de muitas tentativas, erros e consultas que ele podê ficar pronto. Este foi um projeto que construi com intuito de puro estudo, e me ajudou muito no meu crescimento como
+                    programador.
+                    <br><br> Espero um Remake de Persona 3 ! : )
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+            </div>
+            <div class="col-md-12 col-lg-6 empresas">
+                <a href="#" class="ml-3"><img src="img/Atlus_Logo.png"></a>
+                <a href="#"><img src="img/sony.png"></a>
+                <a href="#"><img src="img/path_shower.png"></a>
+                <br><br>
+            </div>
+        </div>
+        <!-- ############################-->
+        <div class="rodape_ico py-1 justify-content-center bg-primary">
+            <center>
+                <div class="redes_rodape">
+                    <a href="#"><img src="img/git.png"></a>
+                    <a href="#"><img src="img/linkedin.png"></a>
+                    <a href="#"><img src="img/facebook.png"></a>
+                </div>
+            </center>
+        </div>
+        <div class="text-center py-1 rodape_direitos_autorais">
+            ©2006-2008 ATLUS<br> SHIN MEGAMI TENSEI, SMT, and Persona are registered trademarks of Atlus U.S.A., Inc. PlayStation and the "PS" Family logo<br> are registered trademarks of Sony Computer Entertainment Inc.
+        </div>
 
-	</footer>
-	<!--Booststrap-->
-	<script src="node/node_modules/jquery/dist/jquery.js"></script>
-	<script src="node/node_modules/popper.js/dist/umd/popper.js"></script>
-	<script src="node/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </footer>
+    <!--Booststrap-->
+    <script src="node/node_modules/jquery/dist/jquery.js"></script>
+    <script src="node/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 
 </html>

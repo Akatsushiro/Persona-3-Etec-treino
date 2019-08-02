@@ -35,7 +35,7 @@ include "../php/conectar.php";
         $agilidade   = $coluna['agilidade'];
         $sorte       = $coluna['sorte'];
     }
-    //pesquisa as caracteristcas elementais da perso na
+    //pesquisa as caracteristcas elementais da persona
     $dados = mysqli_query($sql, "SELECT * FROM `elementos` WHERE id_persona_id = '$id'");
     while ($coluna = mysqli_fetch_array($dados)) {
         $corte        = $coluna['corte'];
@@ -56,30 +56,14 @@ include "../php/conectar.php";
         $temp = $coluna['id_habilidade_per'];
         $vetor[] = $temp;
     }
-    //aqui armazena os ids a serem pesquisados
-    $vetor = (array)$vetor;
-    //pesquisa os ids da skills pesquisados
-    $cont = count($vetor);
-    $col = 0;
-    while ($col < $cont) {
-        $temp = $vetor[$col];
-        $col++;
-        $dados = mysqli_query($sql, "SELECT * FROM `lista_habilidade` where id_habilidade = '$temp'");
-        while ($coluna = mysqli_fetch_array($dados)) {
-            $skill[] = $coluna['nome_habilidade'];
-        }
-    }
-    $cont = 0;
-    while (count($skill) < 8) {
-        $skill[] = "-";
-    }
+    $vetor = (array) $vetor;
     ?>
 
     <section>
         <center>
             <h1>Cadastrar Persona</h1>
         </center>
-        <form enctype="multipart/form-data" method="post" action="../php/update_persona.php" class="row">
+        <form enctype="multipart/form-data" method="post" action='../php/update_persona.php?id=<?php echo"$id" ?>' class="row">
             <!-- Usa o "name" nome para chamar o valor digitado no arquivo php informado no action-->
             <div class="col-6 bg-success persona_dados">
                 <center><b>
@@ -110,31 +94,34 @@ include "../php/conectar.php";
             <br>
             <div class="status col-6 bg-primary">
                 <center>
-                    <b><label>Força: </label> <input type="number" name="forca" value="<?php echo $forca;?>" required class="mt-3">
+                    <b><label>Força: </label> <input type="number" name="forca" value="<?php echo $forca; ?>" required class="mt-3">
                         <br>
                         <br>
-                        <label>Magia: </label> <input type="number" name="magia" value=<?php echo $magia;?> required>
+                        <label>Magia: </label> <input type="number" name="magia" value=<?php echo $magia; ?> required>
                         <br>
                         <br>
-                        <label>Resistência: </label> <input type="number" name="resistencia" value=<?php echo $resistencia;?> required>
+                        <label>Resistência: </label> <input type="number" name="resistencia" value=<?php echo $resistencia; ?> required>
                         <br>
                         <br>
-                        <label>Agilidade: </label> <input type="number" name="agilidade" value=<?php echo $agilidade;?> required>
+                        <label>Agilidade: </label> <input type="number" name="agilidade" value=<?php echo $agilidade; ?> required>
                         <br>
                         <br>
-                        <label>Sorte: </label> <input type="number" name="sorte" value=<?php echo $sorte;?> required>
+                        <label>Sorte: </label> <input type="number" name="sorte" value=<?php echo $sorte; ?> required>
                         <br>
                         <br>
                 </center>
                 </b>
             </div>
 
-            <div class="elementos bg-danger py-3">
+            <div class="elementos col-12 bg-danger py-2 pt-4">
                 <center>
                     <?php
+                    $i = 0;
+                    $elementos_ = array($corte, $perfurante, $impacto, $fogo, $gelo, $vento, $eletricidade, $luz, $trevas);
                     $habilidade_tipo = array("corte", "perfurante", "impacto", "fogo", "gelo", "vento", "eletricidade", "luz", "trevas");
                     foreach ($habilidade_tipo as $tipo) {
-                        echo "
+                        if ($elementos_[$i] == "-") {
+                            echo "
                         <label>" . ucfirst($tipo) . ":</label>
                         <select name=$tipo required>
                             <option value='-'>-</option>
@@ -143,50 +130,85 @@ include "../php/conectar.php";
                             <option value='NUL'>Null</option>
                             <option value='STR'>Resist</option>
                         </select>";
+                            $i++;
+                        } elseif ($elementos_[$i] == "WK") {
+                            echo "
+                            <label>" . ucfirst($tipo) . ":</label>
+                            <select name=$tipo required>
+                                <option value='-'>-</option>
+                                <option value='WK' selected>Weak</option>
+                                <option value='DRM'>Drain</option>
+                                <option value='NUL'>Null</option>
+                                <option value='STR'>Resist</option>
+                            </select>";
+                            $i++;
+                        } elseif ($elementos_[$i] == "DRM") {
+                            echo "
+                            <label>" . ucfirst($tipo) . ":</label>
+                            <select name=$tipo required>
+                                <option value='-'>-</option>
+                                <option value='WK'>Weak</option>
+                                <option value='DRM' selected>Drain</option>
+                                <option value='NUL'>Null</option>
+                                <option value='STR'>Resist</option>
+                            </select>";
+                            $i++;
+                        } elseif ($elementos_[$i] == "NUL") {
+                            echo "
+                            <label>" . ucfirst($tipo) . ":</label>
+                            <select name=$tipo required>
+                                <option value='-'>-</option>
+                                <option value='WK'>Weak</option>
+                                <option value='DRM'>Drain</option>
+                                <option value='NUL' selected>Null</option>
+                                <option value='STR'>Resist</option>
+                            </select>";
+                            $i++;
+                        } elseif ($elementos_[$i] == "STR") {
+                            echo "
+                            <label>" . ucfirst($tipo) . ":</label>
+                            <select name=$tipo required>
+                                <option value='-'>-</option>
+                                <option value='WK'>Weak</option>
+                                <option value='DRM'>Drain</option>
+                                <option value='NUL'>Null</option>
+                                <option value='STR' selected>Resist</option>
+                            </select>";
+                            $i++;
+                        }
                     }
                     ?>
                 </center>
             </div>
-            <center>
-                <table class="table table-sm px-2">
-                    <tr class="slash">
-                    <?php
-  $hab_tipo =array("Almighty", "Bad Status", "Charm", "Dark", "Eletricity", "Enhance", "Fire", "Ice", "Light", "Passive", "Pierce", "Recovery", "Slash", "Special", "Strike", "Tactical Suppor", "Wind");
-  $i = 0;
-  $busca = "SELECT id_habilidade,
-                   nome_habilidade
-              FROM `lista_habilidade`
-              WHERE tipo_habilidade = 'Slash'";
 
-  foreach ($hab_tipo as $valor) {
-    if(in_array($id, $skill)){
-      $checked  = "checked";
-    }else{
-      $checked = " ";
-    }
-    $busca = "SELECT id_habilidade,
-                     nome_habilidade
+            <div class="bg-warning ml-3 px-3">
+                <?php
+                $tipo_habilidades = array("Slash", "Pierce", "Strike", "Fire", "Ice", "Wind", "Eletricity", "Light", "Dark", "Almighty", "Enhance", "Bad Status", "Passive", "Recovery", "Special");
+                foreach ($tipo_habilidades as $valor) {
+                    $dados = mysqli_query(
+                        $sql,
+                        "SELECT id_habilidade,
+                nome_habilidade
                 FROM `lista_habilidade`
-                WHERE tipo_habilidade = $valor";
-    echo"
-    <td>
-    /*Pegasse as habilidades do banco de dados, e as listamos
-    com checkbos, assim as selecionadas, são as habilidades da
-    persona
-    */
-    $dados = mysqli_query($sql,$busca);
-    while ($coluna = mysqli_fetch_array($dados)) {
-        $id   = $coluna[id_habilidade];
-        $nome = $coluna[nome_habilidade];
-        <p><b>$nome<input type='checkbox' name = 'habilidades[]' value = '$id' $checked></b></p>
-
-    }
-</td>
-}";
-?>
-                    </tr>
-                </table>
-                <!-- Faz o arquivo php informado no form ser executado-->
-                <button><b> Cadastrar! </b> </button> <br>
-            </center>
+                WHERE tipo_habilidade = '$valor'"
+                    );
+                    while ($coluna = mysqli_fetch_array($dados)) {
+                        $id = $coluna['id_habilidade'];
+                        $nome = $coluna['nome_habilidade'];
+                        if (in_array($id, $vetor)) {
+                            $hab_existe = "checked";
+                        } else {
+                            $hab_existe = " ";
+                        }
+                        echo "<p><b>$nome<input type='checkbox' name='habilidades[]' $hab_existe value='$id'></b></p>";
+                    }
+                }
+                ?>
+                <center>
+                    <button>Salvar</button>
+                </center>
+            </div>
         </form>
+</body>
+
+</html>

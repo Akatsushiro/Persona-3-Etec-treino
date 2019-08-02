@@ -35,17 +35,35 @@ if (!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 0) {
         <?php echo $login; ?>
       </label>
       <div class="opcoes_all">
-        <div class="opcoes">
-          <button href="excluir_persona_listar.php" class="decoracao | lateral_opcoes">Deletar Persona</button>
-          <button href="listar_atualizar_persona.php" class="decoracao | lateral_opcoes">Atualizar Persona</button>
-          <button href="persona_Cadastro.php" class="decoracao | lateral_opcoes">Cadastrar Persona</button>
-          <button href="salvar_habilidades.html" class="decoracao | lateral_opcoes">Nova Habilidade</button>
-          <button href="#" class="decoracao | lateral_opcoes">Excluir Habilidade</button>
-          <button href="#" class="decoracao | lateral_opcoes">Alterar Habilidade</button>
+      <div class="opcoes">
+          <form action="excluir_persona_listar.php">
+            <button class="decoracao | lateral_opcoes">Deletar Persona</button>
+          </form>
+
+          <form action="listar_atualizar_persona.php">
+            <button class="decoracao | lateral_opcoes">Atualizar Persona</button>
+          </form>
+
+          <form action="persona_Cadastro.php">
+            <button class="decoracao | lateral_opcoes">Cadastrar Persona</button>
+          </form>
+
+          <form action="salvar_habilidades.html">
+            <button class="decoracao | lateral_opcoes">Nova Habilidade</button>
+          </form>
+
+          <form action="#">
+            <button class="decoracao | lateral_opcoes">Excluir Habilidade</button>
+          </form>
+
+          <form action="#">
+            <button class="decoracao | lateral_opcoes">Alterar Habilidade</button>
+          </form>
+          
           <form enctype="multipart/form-data" method="post" action="cadastrar.php">
             <input type="hidden" name="acesso" value="Quati">
             <button class="decoracao | lateral_opcoes">Cadastrar ADM</button>
-          <form>
+          </form>
         </div>
       </div>
     </nav>

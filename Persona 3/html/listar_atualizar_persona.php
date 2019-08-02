@@ -41,7 +41,7 @@ include "../php/sessao.php";
 		
         <tr class = 'selecao'>
             <td>$id</td>
-			<td><a href='../php/persona_update.php?id=$id' class = 'decoracao'>$nome</a></td>
+			<td><a href='persona_update.php?id=$id' class = 'decoracao'>$nome</a></td>
 			<td>$nivel</td>
 			<td>$arcano</td>
 		</tr>";
