@@ -113,31 +113,31 @@ include "../php/conectar.php";
                         </tr>
                         <!--Nesta linha está os valores dos elementos-->
                         <tr>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $corte ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $impacto ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $perfurante ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $fogo ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $gelo ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $vento ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $eletricidade ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $luz ?></label>
                             </td>
-                            <td>
+                            <td class="elemento_txt">
                                 <label><?php echo $trevas ?></label>
                             </td>
                         </tr>
