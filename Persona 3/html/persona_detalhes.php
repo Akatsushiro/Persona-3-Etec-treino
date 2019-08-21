@@ -75,96 +75,71 @@ include "../php/conectar.php";
     }
 
     ?>
-    <center>
-        <div class="row tamanho">
-            <div class="col-xl-5 col-lg-12 coluna_esquerda">
-                <!--Div com o elementos e seus valores que fica na parte superior esquerda-->
-                <div class="row bg-gradient-p3-blue persona_detalhes_elementos">
-                    <table class="col-12 persona_detalhes_elementos">
-                        <!--Esta linha contem somente as imagens dos elementos-->
-                        <tr>
-                            <td>
-                                <img src="../img/ico/slash.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/impacto.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/perfurante.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/fogo.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/gelo.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/vento.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/eletricidade.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/luz.jpg">
-                            </td>
-                            <td>
-                                <img src="../img/ico/trevas.jpg">
-                            </td>
-                        </tr>
-                        <!--Nesta linha está os valores dos elementos-->
-                        <tr>
-                            <td class="elemento_txt">
-                                <label><?php echo $corte ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $impacto ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $perfurante ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $fogo ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $gelo ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $vento ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $eletricidade ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $luz ?></label>
-                            </td>
-                            <td class="elemento_txt">
-                                <label><?php echo $trevas ?></label>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <!--Fim da Div dos elementos-->
+<div class="container-fluid elementos_bar bg-p3-blue">
+      <div class="row">
+        <div class="col elemento">
+          <img src="../img/ico/slash.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/impacto.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/perfurante.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/fogo.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/gelo.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/vento.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/eletricidade.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/luz.jpg">
+        </div>
+        <div class="col elemento">
+          <img src="../img/ico/trevas.jpg">
+        </div>
+      </div>
 
-                <!--Aqui está a imagem o nome e os detalhes mais importantes da persona-->
-                <div class="row persona_detalhes_imagem">
-
-                    <!--Contem o nome, nivel e arcano da persona-->
-                    <div class="col-5 bg-primary">
-                        <p><h1><?php echo $nome ?></h1></p>
-                        <p class="nivel">Nível: <b><?php echo $nivel ?></b></p>
-                        <!--Aqui vem o arcano, que por meio da pesquisa no banco abre a imagem-->
-                        <p>
-                            <h2><?php echo $arcano ?></h2>
-                            <img src="../img/ico/<?php echo $arcano ?>.png" class="arcano">
-                        </p>
-                        <p>Tipo: <b><?php echo $tipo_skill ?></b></p>
-                    </div>
-
-                    <!--Contem a imagem da persona-->
-                    <div class="col-7">
-                        <img src=<?php echo $img ?> class="imagem_persona col-12 mt-5">
-                    </div>
-
+      <div class="row">
+        <div class="col elemento" style="margin:0">
+          <label><?php echo $corte ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $impacto ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $perfurante ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $fogo ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $gelo ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $vento ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $eletricidade ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $luz ?></label>
+        </div>
+        <div class="col elemento">
+          <label><?php echo $trevas ?></label>
+        </div>
+      </div>
+</div>
+<center>
+            <div>
+                <div class="col-7">
+                <img src=<?php echo $img ?> class="imagem_persona col-12 mt-5">
                 </div>
             </div>
 
