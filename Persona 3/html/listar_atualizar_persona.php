@@ -28,8 +28,8 @@ include "../php/sessao.php";
 			<?php
 			include "../php/conectar.php";
             $dados = mysqli_query($sql,
-            'SELECT * 
-                FROM persona 
+            'SELECT *
+                FROM persona
             ORDER BY id_persona ASC');
 			while ($coluna = mysqli_fetch_array($dados)) {
 				$id = $coluna['id_persona'];
@@ -38,7 +38,7 @@ include "../php/sessao.php";
 				$arcano = $coluna['arcano'];
 
 				echo "
-		
+
         <tr class = 'selecao'>
             <td>$id</td>
 			<td><a href='persona_update.php?id=$id' class = 'decoracao'>$nome</a></td>
@@ -49,7 +49,7 @@ include "../php/sessao.php";
 			?>
 		</table>
     </center>
-    
+
     <script src="../node/node_modules/jquery/dist/jquery.js"></script>
   <script src="../node/node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="../node/node_modules/bootstrap/dist/js/bootstrap.js"></script>

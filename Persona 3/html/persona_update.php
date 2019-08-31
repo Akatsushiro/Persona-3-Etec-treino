@@ -15,6 +15,11 @@ include "../php/conectar.php";
 
 <body>
     <?php
+
+    $fp = fopen('data.txt', 'w') or die("Unable to open file!");;
+    fwrite($fp, "teste");
+    fclose($fp);
+
     $id = $_GET['id'];
     //pesquisa os dados basicos da persona escolhida e os guarda em variaveis
     $dados = mysqli_query($sql, "SELECT * FROM persona WHERE id_persona = '$id'");
@@ -26,6 +31,12 @@ include "../php/conectar.php";
         $descricao = $coluna['descricao'];
         $img = $coluna['perfil_persona'];
     }
+
+    $fp = fopen('data.txt', 'a+');
+    fwrite($fp, "i");
+    fwrite($fp, $nome);
+    fclose($fp);
+
     //pesquisa os status da persona escolhida
     $dados = mysqli_query($sql, "SELECT * FROM `status` WHERE id_persona = '$id'");
     while ($coluna = mysqli_fetch_array($dados)) {
@@ -116,19 +127,39 @@ include "../php/conectar.php";
             <div class="elementos col-12 bg-danger py-2 pt-4">
                 <center>
                     <?php
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    $elementos_valor = array ($corte, $perfurante, $impacto, $fogo, $gelo, $vento, $eletricidade, $luz, $trevas);
+=======
                     $i = 0;
                     $elementos_ = array($corte, $perfurante, $impacto, $fogo, $gelo, $vento, $eletricidade, $luz, $trevas);
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
+=======
+                    $i = 0;
+                    $elementos_ = array($corte, $perfurante, $impacto, $fogo, $gelo, $vento, $eletricidade, $luz, $trevas);
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
                     $habilidade_tipo = array("corte", "perfurante", "impacto", "fogo", "gelo", "vento", "eletricidade", "luz", "trevas");
+                    print_r($elementos_valor);
                     foreach ($habilidade_tipo as $tipo) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                        echo "
+=======
                         if ($elementos_[$i] == "-") {
                             echo "
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
+=======
+                        if ($elementos_[$i] == "-") {
+                            echo "
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
                         <label>" . ucfirst($tipo) . ":</label>
                         <select name=$tipo required>
-                            <option value='-'>-</option>
-                            <option value='WK'>Weak</option>
-                            <option value='DRM'>Drain</option>
-                            <option value='NUL'>Null</option>
-                            <option value='STR'>Resist</option>
+                            <option value='-' $select_>-</option>
+                            <option value='WK' $selectWK>Weak</option>
+                            <option value='DRM' $selectDRM>Drain</option>
+                            <option value='NUL' $selectNUL>Null</option>
+                            <option value='STR' $selectSTR>Resist</option>
                         </select>";
                             $i++;
                         } elseif ($elementos_[$i] == "WK") {
@@ -180,6 +211,21 @@ include "../php/conectar.php";
                     ?>
                 </center>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <center>
+                <table class="table table-sm px-2">
+                    <tr class="slash">
+                    
+                    </tr>
+                </table>
+                <!-- Faz o arquivo php informado no form ser executado-->
+                <button><b> Cadastrar! </b> </button> <br>
+            </center>
+        </form>
+=======
+=======
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
 
             <div class="bg-warning ml-3 px-3">
                 <?php
@@ -211,4 +257,9 @@ include "../php/conectar.php";
         </form>
 </body>
 
+<<<<<<< HEAD
 </html>
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
+=======
+</html>
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753

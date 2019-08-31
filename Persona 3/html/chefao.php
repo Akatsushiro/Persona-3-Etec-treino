@@ -35,7 +35,15 @@ if (!isset($_SESSION["autorizacao"]) || $_SESSION["autorizacao"] <> 0) {
         <?php echo $login; ?>
       </label>
       <div class="opcoes_all">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div class="opcoes">
+=======
       <div class="opcoes">
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
+=======
+      <div class="opcoes">
+>>>>>>> d717bfab4c68427bcf19015976d58beee178b753
           <form action="excluir_persona_listar.php">
             <button class="decoracao | lateral_opcoes">Deletar Persona</button>
           </form>

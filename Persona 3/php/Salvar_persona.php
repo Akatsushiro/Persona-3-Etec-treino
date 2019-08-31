@@ -6,7 +6,7 @@ $nome  = $_POST['nome'];
 $arcano = $_POST['arcano'];
 $tipo = $_POST['tipo'];
 $nivel = $_POST['nivel'];
-$descricao = $_POST['descricao'];
+$descricao = addslashes($_POST['descricao']);
 
 //tratamento do nome da imagem
 $imgDir = '../img/compendium/';
@@ -70,7 +70,7 @@ if (move_uploaded_file($_FILES['imagem']['tmp_name'], $imgDir . $imagemF)) {
             '$imagemUp',
             '$arcano',
             '$tipo',
-            '$nivel',
+            $nivel,
             '$descricao')"
     );
 
@@ -148,7 +148,7 @@ if (move_uploaded_file($_FILES['imagem']['tmp_name'], $imgDir . $imagemF)) {
 		VALUES('$last_id',$habilidades[$cont])");
         $cont++;
     }
-    header("Location: ../html/chefao.php");
+    header("Location: ../html/persona_Cadastro.php");
 } else {
     echo "Não foi possivel concluir o upload da imagem";
 }

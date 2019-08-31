@@ -16,6 +16,8 @@ include "../php/conectar.php";
 <body>
 
     <?php
+
+
     $id = $_GET['id'];
     //pesquisa os dados basicos da persona escolhida e os guarda em variaveis
     $dados = mysqli_query($sql, "SELECT * FROM persona WHERE id_persona = '$id'");
@@ -27,6 +29,12 @@ include "../php/conectar.php";
         $descricao = $coluna['descricao'];
         $img = $coluna['perfil_persona'];
     }
+
+    $fp = fopen('data.txt', 'w');
+fwrite($fp, $nome);
+
+fclose($fp);
+
     //pesquisa os status da persona escolhida
     $dados = mysqli_query($sql, "SELECT * FROM `status` WHERE id_persona = '$id'");
     while ($coluna = mysqli_fetch_array($dados)) {

@@ -1,19 +1,18 @@
 -- --------------------------------------------------------
--- Servidor:                     127.0.0.1
--- Versão do servidor:           10.1.38-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              10.1.0.5464
+-- Servidor:                     localhost
+-- Versão do servidor:           5.1.72-community - MySQL Community Server (GPL)
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              9.4.0.5125
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
 -- Copiando estrutura do banco de dados para persona
-CREATE DATABASE IF NOT EXISTS `persona` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE IF NOT EXISTS `persona` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `persona`;
 
 -- Copiando estrutura para tabela persona.elementos
@@ -32,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `elementos` (
   CONSTRAINT `id_persona_id` FOREIGN KEY (`id_persona_id`) REFERENCES `persona` (`id_persona`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela persona.elementos: ~6 rows (aproximadamente)
+-- Copiando dados para a tabela persona.elementos: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `elementos` DISABLE KEYS */;
 REPLACE INTO `elementos` (`corte`, `impacto`, `perfurante`, `fogo`, `gelo`, `vento`, `eletricidade`, `luz`, `trevas`, `id_persona_id`) VALUES
 	('-', '-', '-', '-', '-', '-', 'WK', '-', 'WK', 1),
@@ -41,7 +40,13 @@ REPLACE INTO `elementos` (`corte`, `impacto`, `perfurante`, `fogo`, `gelo`, `ven
 	('-', '-', '-', '-', '-', '-', '-', 'WK', 'STR', 4),
 	('-', '-', '-', '-', 'STR', '-', '-', 'WK', 'NUL', 5),
 	('-', '-', '-', 'STR', 'NUL', '-', '-', 'WK', 'STR', 6),
-	('-', '-', '-', 'STR', '-', '-', 'WK', '-', 'NUL', 7);
+	('-', '-', '-', 'STR', '-', '-', 'WK', '-', 'NUL', 7),
+	('-', '-', '-', 'WK', 'STR', 'DRM', '-', '-', 'STR', 22),
+	('-', '-', '-', 'STR', '-', '-', '-', '-', '-', 23),
+	('-', '-', '-', 'NUL', 'WK', '-', '-', '-', '-', 24),
+	('-', '-', '-', 'NUL', 'WK', '-', '-', '-', '-', 25),
+	('-', '-', '-', 'NUL', 'WK', '-', '-', '-', '-', 26),
+	('-', '-', '-', '-', 'WK', 'NUL', '-', '-', 'STR', 27);
 /*!40000 ALTER TABLE `elementos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela persona.lista_habilidade
@@ -53,9 +58,9 @@ CREATE TABLE IF NOT EXISTS `lista_habilidade` (
   `rank` varchar(2) NOT NULL,
   `descricao_habilidade` varchar(150) NOT NULL,
   PRIMARY KEY (`id_habilidade`)
-) ENGINE=InnoDB AUTO_INCREMENT=277 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela persona.lista_habilidade: ~264 rows (aproximadamente)
+-- Copiando dados para a tabela persona.lista_habilidade: ~280 rows (aproximadamente)
 /*!40000 ALTER TABLE `lista_habilidade` DISABLE KEYS */;
 REPLACE INTO `lista_habilidade` (`id_habilidade`, `nome_habilidade`, `tipo_habilidade`, `custo`, `rank`, `descricao_habilidade`) VALUES
 	(1, 'Bufu', 'Ice', '4SP', '1', 'Causa dano leve de Gelo / Congela 1 inimigo.'),
@@ -64,12 +69,12 @@ REPLACE INTO `lista_habilidade` (`id_habilidade`, `nome_habilidade`, `tipo_habil
 	(4, 'Sonic Punch', 'Strike', '9%HP', '2', 'Causa dano de impacto a 1 inimigo.'),
 	(5, 'Ice Boost', 'Passive', '-', '2', 'Fortalece ataques de gelo (25%).'),
 	(6, 'Mabufu', 'Ice', '8SP', '2', 'Causa dano leve de gelo/ todos os inimigos.'),
-	(7, 'Ziodyne', 'Eletricity', '16SP', '', 'Causa dano elétrico pesado/ Choques à 1 inimigo.'),
+	(7, 'Ziodyne', 'Eletricity', '16SP', '5', 'Causa dano elétrico pesado/ Choques à 1 inimigo.'),
 	(8, 'Vile Assault', 'Pierce', '12%HP', '5', 'Causa dano pesado perfurante à 1 inimigo. Bônus de dano a inimigos caídos.'),
-	(9, 'Maziodyne', 'Eletricity', '32SP', '', 'Causa dano elétrico pesado/ Choques todos os inimigo.'),
+	(9, 'Maziodyne', 'Eletricity', '32SP', '6', 'Causa dano elétrico pesado/ Choques todos os inimigo.'),
 	(10, 'Elec Amp', 'Passive', '-', '4', 'Fortalece muito ataques elétricos (50%)'),
-	(11, 'Thunder Reign', 'Eletricity', '32SP', '', 'Causa dano elétrico gravíssimo/ Choque à 1 Inimigo.'),
-	(12, 'Spell Master', 'Passive', '-', '', 'Corta pela metade o custo das skills mágicas'),
+	(11, 'Thunder Reign', 'Eletricity', '32SP', '9', 'Causa dano elétrico gravíssimo/ Choque à 1 Inimigo.'),
+	(12, 'Spell Master', 'Passive', '-', '9', 'Corta pela metade o custo das skills mágicas'),
 	(13, 'Bash', 'Strike', '7%HP', '1', 'Causa dano leve de impacto à 1 inimigo'),
 	(14, 'Agi', 'Fire', '3SP', '1', 'Causa leve dano de fogo à um inimigo'),
 	(15, 'Tarunda', 'Enhance', '6SP', '2', 'Diminui o poder de ataque de 1 inimigo por 3 turnos'),
@@ -331,22 +336,28 @@ REPLACE INTO `lista_habilidade` (`id_habilidade`, `nome_habilidade`, `tipo_habil
 	(273, 'Justice', 'Light', '30%SP', 'F', 'Causa dano de luz equivalente a metade do HP do alvo a todos os inimigos.(Archangel + Angel)'),
 	(274, 'King and I', 'Ice', '15%SP', 'F', 'Causa dano moderado de gelo a todos os inimigos com alta chance de causar "FREEZE".(Black Frost + King Frost)'),
 	(275, 'Last Judge', 'Almighty', '30%SP', 'F', 'Causa dano pesado de almighty a todos os inimigos. (Metatron + Mithra)'),
-	(276, 'Raktapaksha', 'Almighty', '15%SP', 'F', 'Conjura dekaja e tem altas chances de causar nocaute.(Garuda + Gurr)');
+	(276, 'Raktapaksha', 'Almighty', '15%SP', 'F', 'Conjura dekaja e tem altas chances de causar nocaute.(Garuda + Gurr)'),
+	(277, 'Scarlet Havoc', 'Tactical Suppor', '15%SP', 'F', 'Causa grande dano de corte a todos os inimigos.'),
+	(282, 'Summer Dream', 'Special', '15%SP', 'F', 'Efeito Randômico entre: 1) Todos os inimigos são nocauteados <br> 2) Todos os inimigos tem HP e SP restaurados <br> 3)Todos os aliados são nocauteados'),
+	(284, 'Thunder Call', 'Eletricity', '15%SP', 'F', 'Causa grande dano eletricom com alta chance de causar choque.'),
+	(285, 'Trickster', 'Bad Status', '15%SP', 'F', 'Causa status negativos aleatórios nos inimigos, mas as vezes o time também é afetado'),
+	(286, 'Valhalla', 'Enhance', '40%SP', 'F', 'Bloqueia todos os elementos inclusive "Almighty" por um turno mas o alvo ficará  com HP e SP em 1 após isso.'),
+	(287, '', '', '', '', '');
 /*!40000 ALTER TABLE `lista_habilidade` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela persona.persona
 CREATE TABLE IF NOT EXISTS `persona` (
   `id_persona` int(11) NOT NULL AUTO_INCREMENT,
   `nome_persona` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `perfil_persona` varchar(40) CHARACTER SET utf8 NOT NULL,
-  `arcano` varchar(15) CHARACTER SET utf8 NOT NULL,
+  `perfil_persona` varchar(80) CHARACTER SET utf8 NOT NULL,
+  `arcano` varchar(20) CHARACTER SET utf8 NOT NULL,
   `tipo` varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `nivel` int(11) NOT NULL,
   `descricao` varchar(250) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id_persona`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
 
--- Copiando dados para a tabela persona.persona: ~6 rows (aproximadamente)
+-- Copiando dados para a tabela persona.persona: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
 REPLACE INTO `persona` (`id_persona`, `nome_persona`, `perfil_persona`, `arcano`, `tipo`, `nivel`, `descricao`) VALUES
 	(1, 'Orpheus', '../img/compendium/orpheus.png', 'Fool', 'Fire', 1, 'Um poeta da mitologia grega habilidoso com a lira. Ele tentou recuperar sua esposa, Eurydice, de Hades, mas ela desapareceu quando ele olhou para trás antes de chegar à superfície.'),
@@ -355,7 +366,13 @@ REPLACE INTO `persona` (`id_persona`, `nome_persona`, `perfil_persona`, `arcano`
 	(4, 'Slime', '../img/compendium/slime.png', 'Fool', 'All', 12, 'um monstro primitivo com um corpo viscoso. Existem várias teorias quanto à sua origem, mas ainda está em debate. Coleta objetos brilhantes compulsivamente.'),
 	(5, 'Legion', '../img/compendium/Legion.png', 'Fool', 'All', 22, 'O espírito que disse: "Nós somos muitos" nas escrituras antigas. O nome vem do termo militar romano para uma unidade do exército de 3.000 a 6.000 homens.'),
 	(6, 'Black Frost', '../img/compendium/BlackFrost.png', 'Fool', 'All', 34, 'Um Jack Frost que desejava poderes malignos. Este demônio poderoso nasce quando um fofo Jack Frost se lembra de sua natureza como um demônio'),
-	(7, 'Ose', '../img/compendium/.png', 'Fool', 'All', 44, 'Um dos 72 demônios de Goetia, conhecido como o Presidente do Inferno. Ele pode mudar sua forma de leopardo para humanos e revela a verdade por trás dos mistérios divinos.');
+	(7, 'Ose', '../img/compendium/ose.png', 'Fool', 'All', 44, 'Um dos 72 demônios de Goetia, conhecido como o Presidente do Inferno. Ele pode mudar sua forma de leopardo para humanos e revela a verdade por trás dos mistérios divinos.'),
+	(22, 'Loki', '../img/compendium/loki.png', 'Fool', 'All', 58, 'Uma grande divindade nórdica, conhecida como um trapaceiro que desafia outros deuses. Irmão de sangue de Odin, mas depois foi punido por seu papel na morte de Balder.'),
+	(23, 'Nekomata', '../img/compendium/nekomata.png', 'Magician', 'Fire', 5, 'Encarnações de gatos de vida longa na mitologia japonesa. Eles têm vários poderes, incluindo fala humana e controle sobre os mortos.'),
+	(24, 'Pyro Jack', '../img/compendium/pyrojack.png', 'Magician', 'Fire', 14, 'Também conhecido como Jack O\'Lantern, ele era um fazendeiro irlandês que persuadiu Satanás a não levá-lo para o inferno. Quando ele foi impedido de entrar no céu, ele vagou pela terra como uma alma de abóbora.'),
+	(25, 'Hua Po', '../img/compendium/huapo.png', 'Magician', 'Fire', 20, 'Um espírito de árvore do folclore chinês que habita em árvores usado para enforcamentos. Ela é menor que uma humana, e não pode falar, mas sua voz é dita tão clara quanto uma canção de pássaro.'),
+	(26, 'Sati', '../img/compendium/sati.png', 'Magician', 'Fire', 28, 'Primeira consorte de Shiva no mito hindu, ela se atirou em um fogo de sacrifício em protesto contra o tratamento que seu pai fez a Shiva. Renascida como Parvati, ela se reuniu com Shiva.'),
+	(27, 'Orobas', '../img/compendium/orobas.png', 'Magician', 'Wind', 34, 'Um dos 72 demônios de Goetia. Ele aparece como um cavalo e responde a perguntas do passado, presente e futuro. Ele é fiel ao seu conjurador.');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela persona.persona_habilidade
@@ -364,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `persona_habilidade` (
   `id_habilidade_per` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela persona.persona_habilidade: ~27 rows (aproximadamente)
+-- Copiando dados para a tabela persona.persona_habilidade: ~75 rows (aproximadamente)
 /*!40000 ALTER TABLE `persona_habilidade` DISABLE KEYS */;
 REPLACE INTO `persona_habilidade` (`id_persona_hab`, `id_habilidade_per`) VALUES
 	(3, 1),
@@ -404,7 +421,44 @@ REPLACE INTO `persona_habilidade` (`id_persona_hab`, `id_habilidade_per`) VALUES
 	(7, 129),
 	(7, 55),
 	(7, 38),
-	(7, 215);
+	(7, 215),
+	(22, 62),
+	(22, 73),
+	(22, 139),
+	(22, 142),
+	(22, 169),
+	(22, 170),
+	(22, 224),
+	(23, 22),
+	(23, 14),
+	(23, 18),
+	(23, 133),
+	(23, 3),
+	(24, 14),
+	(24, 18),
+	(24, 54),
+	(24, 104),
+	(24, 133),
+	(24, 254),
+	(25, 18),
+	(25, 54),
+	(25, 102),
+	(25, 165),
+	(25, 176),
+	(25, 3),
+	(26, 18),
+	(26, 54),
+	(26, 89),
+	(26, 91),
+	(26, 92),
+	(26, 136),
+	(27, 48),
+	(27, 71),
+	(27, 103),
+	(27, 112),
+	(27, 188),
+	(27, 223),
+	(27, 136);
 /*!40000 ALTER TABLE `persona_habilidade` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela persona.status
@@ -419,7 +473,7 @@ CREATE TABLE IF NOT EXISTS `status` (
   CONSTRAINT `id_persona` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id_persona`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela persona.status: ~6 rows (aproximadamente)
+-- Copiando dados para a tabela persona.status: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
 REPLACE INTO `status` (`forca`, `magia`, `resistencia`, `agilidade`, `sorte`, `id_persona`) VALUES
 	(2, 2, 2, 2, 2, 1),
@@ -428,28 +482,40 @@ REPLACE INTO `status` (`forca`, `magia`, `resistencia`, `agilidade`, `sorte`, `i
 	(9, 9, 7, 8, 10, 4),
 	(17, 15, 18, 8, 15, 5),
 	(23, 25, 22, 22, 25, 6),
-	(32, 26, 30, 27, 24, 7);
+	(32, 26, 30, 27, 24, 7),
+	(41, 47, 30, 42, 21, 22),
+	(4, 6, 5, 3, 4, 23),
+	(7, 14, 9, 8, 11, 24),
+	(10, 15, 11, 14, 13, 25),
+	(17, 25, 18, 16, 15, 26),
+	(20, 29, 21, 22, 17, 27);
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela persona.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
+  `acesso_lvl` int(11) NOT NULL DEFAULT '1',
   `email` varchar(40) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `login` varchar(15) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `senha` int(11) NOT NULL,
   `rm` int(11) NOT NULL,
   `img_perfil` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL DEFAULT '../img/usuarios/perfil/default.jpg',
-  `img_capa` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs DEFAULT '../img/usuarios/capa/padrao.jpg',
+  `img_capa` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_cs DEFAULT '../img/usuarios/capa_cadastro/padrao.png',
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela persona.usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela persona.usuarios: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-REPLACE INTO `usuarios` (`id`, `nome`, `email`, `login`, `senha`, `rm`, `img_perfil`, `img_capa`) VALUES
-	(2, 'Patrick', 'Patrick@dantas.com', 'Akatsushiro', 1230, 18497, '../img/usuarios/perfil/18497.jpg', '../img/usuarios/capa_cadastro/padrao.png');
+REPLACE INTO `usuarios` (`id`, `nome`, `acesso_lvl`, `email`, `login`, `senha`, `rm`, `img_perfil`, `img_capa`) VALUES
+	(2, 'Patrick', 0, 'Patrick@dantas.com', 'Akatsushiro', 1230, 18497, '../img/usuarios/perfil/18497.jpg', '../img/usuarios/capa_cadastro/padrao.png'),
+	(3, 'Quaiati', 0, 'QuaiatiQuati@gmail.com', 'Peixe_Quati', 1230, 12345, '../img/usuarios/perfil/12345.jpg', '../img/usuarios/capa_cadastro/padrao.png'),
+	(4, 'Quaiati', 1, 'QuaiatiQuati1@gmail.com', 'Peixe o Quati', 1230, 12356, '../img/usuarios/perfil/12356.jpg', '../img/usuarios/capa_cadastro/padrao.png'),
+	(5, 'Lara', 1, 'Lara@dantas.com', 'Lara', 1230, 12300, '../img/usuarios/perfil/12300.png', '../img/usuarios/capa_cadastro/padrao.png'),
+	(6, 'Patrick22', 1, 'Akatsu@shiro.com', 'Akatsushiro Seg', 9999, 15963, '../img/usuarios/perfil/15963.jpg', '../img/usuarios/capa_cadastro/padrao.png'),
+	(7, 'Nix', 0, 'Nix@Apraiser.com', 'The_Apraiser', 1230, 12369, '../img/usuarios/perfil/12369.jpg', '../img/usuarios/capa_cadastro/padrao.png');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

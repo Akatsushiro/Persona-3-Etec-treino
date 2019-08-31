@@ -8,7 +8,7 @@
         <!--esse aqui é para chamar o css-->
 		<link rel="stylesheet" href="../css/normalize.css" type="text/css">
 		<link rel="stylesheet" href="../css/geral.css" type="text/css">
-		<link rel="stylesheet" href="../css/persona_detalhes.css" type="text/css">
+		<link rel="stylesheet" href="../css/persona_detalhes2.css" type="text/css">
     </head>
     <body>
         <?php
@@ -80,6 +80,73 @@
             </div>
         </header>
         <section>
+            <table class="elementos_table">
+                <!--Esta linha contem somente as imagens dos elementos-->
+                <tr>
+                    <td>
+                        <img src="../img/ico/slash.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/impacto.jpg">
+                    </td>
+                    <td>
+                         <img src="../img/ico/perfurante.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/fogo.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/gelo.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/vento.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/eletricidade.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/luz.jpg">
+                    </td>
+                    <td>
+                        <img src="../img/ico/trevas.jpg">
+                    </td>
+                </tr>
+                        <!--Nesta linha está os valores dos elementos-->
+                        <tr>
+                            <td class="elemento_txt">
+                                <label><?php echo $corte ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $impacto ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $perfurante ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $fogo ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $gelo ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $vento ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $eletricidade ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $luz ?></label>
+                            </td>
+                            <td class="elemento_txt">
+                                <label><?php echo $trevas ?></label>
+                            </td>
+                        </tr>
+                    </table>
+
+
+
+
+
             <div class = "descricao">
                 <label><?php echo $descricao?></label>
             </div>
@@ -116,54 +183,7 @@
                 <div class = "habilidade_slot"><?php echo $skill[7]?></div>
             </div>
 
-            <div class = "caracteristicas">
-                <!-- elemento: corte-->
-                <div class = "elemento">
-                    <img src ="../img/ico/slash.jpg"><br>
-                    <label><?php echo $corte?></label>
-                </div>
-                <!--elemento: impacto-->
-                <div class = "elemento">
-                    <img src ="../img/ico/impacto.jpg"><br>
-                    <label><?php echo $impacto?></label>
-                </div>
-                <!--elemento: perfurante-->
-                <div class = "elemento">
-                    <img src ="../img/ico/perfurante.jpg"><br>
-                    <label><?php echo $perfurante?></label>
-                </div>
-                &nbsp
-                <!--elemento: fogo-->
-                <div class = "elemento">
-                    <img src ="../img/ico/fogo.jpg"><br>
-                    <label><?php echo $fogo?></label>
-                </div>
-                <!--elemento:  gelo-->
-                <div class = "elemento">
-                    <img src ="../img/ico/gelo.jpg"><br>
-                    <label><?php echo $gelo?></label>
-                </div>
-                <!--elemento: eletricidade-->
-                <div class = "elemento">
-                    <img src ="../img/ico/eletricidade.jpg"><br>
-                    <label><?php echo $eletricidade?></label>
-                </div>
-                <!--elemento: vento-->
-                <div class = "elemento">
-                    <img src ="../img/ico/vento.jpg"><br>
-                    <label><?php echo $vento?></label>
-                </div>
-                <!--elemento: luz-->
-                <div class = "elemento">
-                    <img src ="../img/ico/luz.jpg"><br>
-                    <label><?php echo $luz?></label>
-                </div>
-                <!--elemento: trevas-->
-                <div class = "elemento">
-                    <img src ="../img/ico/trevas.jpg"><br>
-                    <label><?php echo $trevas?></label>
-                </div>
-            </div>
+            
         </section>
     </body>
 </html>

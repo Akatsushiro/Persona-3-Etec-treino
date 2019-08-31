@@ -112,11 +112,11 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 	<center>
 		<table class="my-3 table container bg-light">
 			<thead class="thead-dark">
-			<tr class="cabecario">
-				<th>NOME</th>
-				<th>NIVEL</th>
-				<th>ARCANO</th>
-			</tr>
+				<tr class="cabecario">
+					<th>NOME</th>
+					<th>NIVEL</th>
+					<th>ARCANO</th>
+				</tr>
 			</thead>
 			<?php
 			include "../php/conectar.php";
@@ -130,7 +130,7 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 				echo "
 		
 		<tr class = 'selecao'>
-			<td><a href='persona_detalhes.php?id=$id' class = 'decoracao'>$nome</a></td>
+			<td><a href='persona_detalhes_mobile.php?id=$id' class = 'decoracao'>$nome</a></td>
 			<td>$nivel</td>
 			<td>$arcano</td>
 		</tr>";

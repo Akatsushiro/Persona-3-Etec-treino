@@ -1,0 +1,122 @@
+body {
+    background-image: url(../img/p_detalhes_bg.png);
+    overflow-x: hidden;
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+div .elemento {
+    text-align: center;
+    color: azure;
+    font-size: 1em;
+}
+
+.elemento img {
+    width: 70%;
+}
+
+#persona_bg {
+    width: 100%;
+    height: 100%;
+}
+
+.persona_img {
+    text-align: center;
+    height: 70vh;
+}
+
+.imagem_persona {
+    width: 100%!important;
+    height: 70vh!important;
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+.barra_status {
+    text-align: center;
+}
+
+.progress {
+    height: 3vh;
+    border-radius: 50px;
+    padding: 0;
+}
+
+.progress-bar {
+    margin: 2px;
+    border-radius: 50px;
+}
+
+.barra_numero {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.barra_numero strong {
+    color: azure;
+}
+
+.status {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-right: 7px;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+
+.nome {
+    color: azure;
+    font-size: 3rem;
+    position: relative;
+}
+
+.nivel {
+    color: azure;
+    font-size: 3rem;
+    float: right;
+}
+
+.arcano {
+    font-size: 3rem;
+    margin-left: 15vh;
+}
+
+.tipo {
+    text-align: center;
+    color: azure;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+
+.habilidades {
+    text-align: center;
+}
+
+.habilidades .col {
+    border-left: solid 5px white;
+    border-right: solid 2px white;
+}
+
+.habilidades span {
+    color: azure;
+    font-size: 1.5em;
+}
+
+.descricao {
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(251, 254, 255);
+}
+
+.detalhes_grupo {
+    height: 70vh;
+}
