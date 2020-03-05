@@ -1,0 +1,33 @@
+table{
+    width: 90%;
+    margin-left: 5%;
+    border: 3px solid black;
+}
+tr{
+    background-color: rgba(137, 43, 226, 0.747);
+    border: 3px solid rgb(255, 0, 0);
+}
+td{
+    font-family: 'comumPersona', arial, monospace;
+    width: 10%;
+    font-size: 30px;
+    text-align: center;
+    border-top: 3px solid black;
+    z-index: -1;
+    padding-top: 5px;
+}
+.nome_h{
+  background-color: rgba(255, 0, 150, 0.5);
+}
+.tipo_h{
+  background-color: rgba(0, 0, 150, 0.5);
+}
+.custo_h{
+  background-color: rgba(150, 0, 150, 0.5);
+}
+.rank_h{
+  background-color: rgba(50, 50, 150, 0.5);
+}
+.desc_h{
+  background-color: rgba(25, 200, 150, 0.5);
+}

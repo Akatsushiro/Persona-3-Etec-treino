@@ -1,0 +1,144 @@
+﻿
+
+/*alinhamento e fonte do texto -> "Persona 3 The tower Wait Us" do Header*/
+.abertura_logo_text {
+    text-align: center;
+    font-family: 'p3', Arial, monospace;
+}
+
+.scrollspy_agradecimentos_home {
+    /*Esta parte do CSS é obrigatória para o funcionamento do scrollspy*/
+    position: relative;
+    overflow: auto;
+    height: 257px;
+    /*---------------------------------------*/
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: justify;
+    padding: 10px;
+}
+/*Menu lateral de agradecimentos, funciona como um tipo de indice*/
+.navbar_agradecimentos_menu_lateral {
+    border-radius: 10px;
+    background-color: #090081;
+}
+
+.scroll-mobile-type {
+    display: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .scroll-desktop-type {
+        display: none;
+    }
+    .scroll-mobile-type {
+        display: initial;
+    }
+}
+
+.principal_detonado {
+    width: 100%;
+    margin: auto;
+}
+
+/*posiciona a barra de acesso/Nav*/
+
+.barra_acesso {
+    background-color: rgba(146, 197, 255, 0.9);
+    display: inline-block;
+    padding: 5px;
+    font-size: 125%;
+    border-radius: 10px;
+    font-family: 'comum_persona', Courier, monospace;
+    box-shadow: inset 0 0 2px #000000;
+    margin-top: -20px;
+}
+
+.main {
+    width: 70%;
+    margin-top: 3%;
+    font-family: 'Persona3', Courier, monospace;
+}
+
+.re_fantasy {
+    background-color: rgba(252, 19, 19, 0.616);
+    border: 5px solid #3a11ce;
+    border-radius: 10px;
+    height: 100%;
+    text-align: center;
+    text-shadow: 1px 1px rgb(60, 0, 129);
+}
+
+#re_fantasy_img {
+    width: 80%;
+}
+
+.re_fantasy_text {
+    padding: 30px;
+    text-align: justify;
+    font-size: 130%;
+    font-family: 'padrao', arial, monospace;
+}
+
+.lateral_acesso {
+    position: absolute;
+    border: 5px double rgba(255, 0, 0, 0.781);
+    border-radius: 15px;
+    width: 27%;
+    padding: 3px;
+    margin-left: 71.5%;
+    height: 1000px;
+    background-color: rgba(23, 0, 124, 0.425);
+    text-align: center;
+    text-shadow: 1px 1px rgb(166, 99, 243);
+}
+
+#test_img_lateral {
+    width: 100%;
+}
+
+.btn_main {
+    font-size: 20px;
+    width: 90%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    background-color: rgb(245, 241, 225);
+    padding: 10px;
+}
+
+.barra_de_pesquisa {
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 650px) {
+    .barra_de_pesquisa {
+        display: none;
+    }
+}
+
+.pesquisa_mobile_bar {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .pesquisa_mobile_bar {
+        display: inline-block;
+    }
+}
+
+.card-text {
+    text-align: justify;
+}
+
+.detonado_meses {
+    background-color: rgba(23, 0, 124, 0.199);
+}
+
+.titulo_tipo {
+    color: #ffffff;
+    text-align: center;
+    background-color: #1900ff;
+}
+

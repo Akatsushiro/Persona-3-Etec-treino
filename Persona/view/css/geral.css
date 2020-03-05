@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Persona;
+    src: url('../assets/fonts/february.otf');
+
+    font-family: padrao;
+    src: url('../assets/fonts/february.otf');
+
+    font-family: p3;
+    src: url("../assets/fonts/p3.ttf");  
+
+    font-family: p5;
+    src: url('../assets/fonts/p5.ttf');
+}
+body{
+    background-image: url('../assets/img/background_3.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+.decoracao{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+.botao{
+    border-radius: 10px;
+    background-color: rgb(245, 241, 225);
+    padding: 10px;
+    text-shadow: 1px 1px rgb(166, 99, 243);
+}
+/*define o tamanho da imagem inicial do Header*/
+#abertura img {
+    width: 100%;
+    height: 500px;
+}
+/* configurações de comportamento da barra de pesquisa */
+.barra_de_pesquisa {
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 650px) {
+    .barra_de_pesquisa {
+        display: none;
+    }
+}
+.pesquisa_mobile_bar {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .pesquisa_mobile_bar {
+        display: inline-block;
+    }
+}
+
+/*Rodapé*/
+
+footer {
+    background-color: #000000f8;
+    border-top: solid #020088 3px;
+}
+.redes_rodape{
+    position: relative;
+}
+.empresas{
+    position: relative;
+    padding: 0;
+}
+.empresas img {
+    width: 25%;
+    height: 25%;
+    margin-top: 15%;
+    margin-right: 6%;
+}
+.rodape_ico img{
+    width: 4%;
+    margin-right: 1%;
+}
+@media  only screen and (max-width: 1199px){
+    .rodape_ico img{
+        width: 15%;
+    }
+}
+.rodape_direitos_autorais {
+    background-color: #0000b7;
+    color: #000000;
+    font-size: 0.68rem;
+}
