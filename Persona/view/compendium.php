@@ -1,3 +1,6 @@
+<?php
+require_once "../config.php";
+?>
 <!Doctype html>
 <html lang="pt-br">
 
@@ -88,12 +91,12 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 					</a>
 				</li>
 				<!--Barra de pesquisa, aparece somente em dispositivos mobile-->
-                <li class="nav-item pesquisa_mobile_bar">
-                    <form class="form-inline nav-link">
-                        <input class="form-control mr-2" type="search" placeholder="Buscar...">
-                        <button class="btn btn-primary" type="submit">Ok</button>
-                    </form>
-                </li>
+				<li class="nav-item pesquisa_mobile_bar">
+					<form class="form-inline nav-link">
+						<input class="form-control mr-2" type="search" placeholder="Buscar...">
+						<button class="btn btn-primary" type="submit">Ok</button>
+					</form>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -108,22 +111,7 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 				</tr>
 			</thead>
 			<?php
-			include "../php/conectar.php";
-			$dados = mysqli_query($sql, 'SELECT * FROM persona ORDER BY arcano, nivel');
-			while ($coluna = mysqli_fetch_array($dados)) {
-				$id = $coluna['id_persona'];
-				$nome = $coluna['nome_persona'];
-				$nivel = $coluna['nivel'];
-				$arcano = $coluna['arcano'];
-
-				echo "
-		
-		<tr class = 'selecao'>
-			<td><a href='persona_detalhes_mobile.php?id=$id' class = 'decoracao'>$nome</a></td>
-			<td>$nivel</td>
-			<td>$arcano</td>
-		</tr>";
-			}
+			require_once "../Controller/compendium/personas_listar.php";
 			?>
 		</table>
 	</center>
