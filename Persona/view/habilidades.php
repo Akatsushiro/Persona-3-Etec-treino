@@ -99,35 +99,9 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
     </nav>
 
     <main>
-        <table cellspacing="0">
-            <tr>
-                <td>Nome</td>
-                <td>Tipo</td>
-                <td>Custo</td>
-                <td>Rank</td>
-                <td>Descrição</td>
-            </tr>
-            <?php
-            include "../php/conectar.php";
-            $dados = mysqli_query($sql, 'SELECT * FROM lista_habilidade ORDER BY tipo_habilidade');
-            while ($coluna = mysqli_fetch_array($dados)) {
-                $nome  = $coluna['nome_habilidade'];
-                $tipo  = $coluna['tipo_habilidade'];
-                $custo = $coluna['custo'];
-                $rank  = $coluna['rank'];
-                $desc  = $coluna['descricao_habilidade'];
-
-                echo "
-                    <tr>
-                        <td class = 'nome_h'>$nome</td>
-                        <td class = 'tipo_h'>$tipo</td>
-                        <td class = 'custo_h'>$custo</td>
-                        <td class = 'rank_h'>$rank</td>
-                        <td class = 'desc_h'>$desc</td>
-                    </tr>";
-            }
-            ?>
-        </table>
+        <?php 
+        require_once ABSPATH . "/Controller/habilidade/tabela_habilidades.php";
+        ?>
     </main>
     <!-- Rodapé -->
     <footer class="page-footer">

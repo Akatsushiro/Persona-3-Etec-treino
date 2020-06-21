@@ -154,7 +154,7 @@ include ABSPATH . "/Controller/persona/persona_dados.php";
         <!-- ############################################################################################## -->
         <div class="col-5 pl-0">
             <div class="persona_img col-12 m-0 p-0" id="persona_img">
-                <img src=<?php echo $img ?> class="imagem_persona">
+                <img src=<?php echo "assets/compendium/" . $img ?> class="imagem_persona">
             </div>
         </div>
 

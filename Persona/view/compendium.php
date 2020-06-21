@@ -102,18 +102,10 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
 	</nav>
 
 	<center>
-		<table class="my-3 table container bg-light">
-			<thead class="thead-dark">
-				<tr class="cabecario">
-					<th>NOME</th>
-					<th>NIVEL</th>
-					<th>ARCANO</th>
-				</tr>
-			</thead>
 			<?php
-			require_once "../Controller/compendium/personas_listar.php";
+			include_once ABSPATH . "/Controller/compendium/personas_listar.php";
 			?>
-		</table>
+
 	</center>
 
 	<footer class="page-footer">
