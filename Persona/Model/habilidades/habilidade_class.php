@@ -1,5 +1,5 @@
 <?php
-require_once "../../config.php";
+require_once "../config.php";
 require_once ABSPATH . "/Model/connect_database.php";
 
 class Habilidade extends Database{

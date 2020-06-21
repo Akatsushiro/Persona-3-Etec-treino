@@ -1,13 +1,18 @@
 @font-face {
     font-family: Persona;
-    src: url('../assets/fonts/february.otf');
-
+    src: url('../assets/fonts/Persona.ttf');
+}
+@font-face{
     font-family: padrao;
     src: url('../assets/fonts/february.otf');
+}
 
+@font-face{
     font-family: p3;
     src: url("../assets/fonts/p3.ttf");  
+}
 
+@font-face{
     font-family: p5;
     src: url('../assets/fonts/p5.ttf');
 }

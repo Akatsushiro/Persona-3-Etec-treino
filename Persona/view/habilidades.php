@@ -1,3 +1,6 @@
+<?php 
+require_once "../config.php";
+?>
 <!Doctype html>
 <html lang="pt-br">
 
@@ -24,8 +27,8 @@
 
                     <div class="carousel-caption">
                         <!--Texto do topo dentro do banner-->
-                        <h1 class="text-p3-blue abertura_logo_text">Persona 3</h1>
-                        <h3 class="text-p3-blue">A Zero Of Infinite Possibilities</h3>
+                        <h1 class="text-primary abertura_logo_text">Persona 3</h1>
+                        <h3 class="text-primary">A Zero Of Infinite Possibilities</h3>
                         <!--Barra de perquisa, aparece em dispositivos mobile-->
                         <form class="form-inline form-group bg-primary barra_de_pesquisa">
                             <input class="form-control mr-2" type="search" placeholder="Buscar...">
@@ -98,11 +101,10 @@ OBS: o navbar deve ficar fixo no topo do site quando o Header for passado, e som
         </div>
     </nav>
 
-    <main>
-        <?php 
-        require_once ABSPATH . "/Controller/habilidade/tabela_habilidades.php";
-        ?>
-    </main>
+    <?php 
+    require_once ABSPATH . "/Controller/habilidade/tabela_habilidades.php";
+    ?>
+
     <!-- Rodapé -->
     <footer class="page-footer">
         <div class="row mx-auto">

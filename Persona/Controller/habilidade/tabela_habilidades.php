@@ -1,6 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
 
-require_once "../../config.php";
 require_once ABSPATH . "/Model/habilidades/habilidade_class.php";
 
 $tabela = new Habilidade();
@@ -27,11 +28,11 @@ foreach ($lista as $coluna) {
 
     echo "
 		<tr class='selecao'>
-			<td>$nome</td>
-			<td>$tipo</td>
-			<td>$custo</td>
-			<td>$rank</td>
-			<td>$descricao</td>
-    </tr>";
+			<td class='align-middle'>$nome</td>
+			<td class='align-middle'>$tipo</td>
+			<td class='align-middle'>$custo</td>
+			<td class='align-middle'>$rank</td>
+			<td class='align-middle'>$descricao</td>
+        </tr>";
 }
 echo "</table>";
